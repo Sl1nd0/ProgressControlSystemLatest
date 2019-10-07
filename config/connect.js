@@ -1,7 +1,7 @@
 const pg = require('pg');
 let queryCheck = "";
 
-const pool = new Pool({
+const pool = new new pg.Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: true,
  });
