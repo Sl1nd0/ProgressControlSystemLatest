@@ -16,17 +16,14 @@ pool.connect(function(err, res) {
 
 //queryCheck = "CREATE database progresscontrolDB;";
  
-queryCheck = "CREATE TABLE employeeleave ";
- queryCheck += "( ";
-  queryCheck += " leaveid serial NOT NULL, ";
- queryCheck += " userid integer, ";
-  queryCheck += " managerid integer, ";
-  queryCheck += " manageremail character varying(100) NOT NULL,";
- queryCheck += "  leavestatus character varying(50) DEFAULT NULL::character varying, ";
- queryCheck += "  startdate timestamp without time zone NOT NULL, ";
-queryCheck += "   enddate timestamp without time zone NOT NULL, ";
-  queryCheck += " leavenote character varying(300), ";
-queryCheck += "   leavetype character varying(20) ) ";
+queryCheck = " CREATE TABLE worksite";
+queryCheck += "  ( ";
+ queryCheck += " siteid serial NOT NULL, ";
+queryCheck += "  sitename character varying(100), ":
+queryCheck += "  red character varying(10), ";
+queryCheck += "  green character varying(10), ";
+queryCheck += "  blue character varying(10) ";
+queryCheck += " ); ";
  pool.query(
      queryCheck, (err4, qres4) => {
  });
