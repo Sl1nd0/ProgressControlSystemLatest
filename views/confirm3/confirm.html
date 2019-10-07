@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Post - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog-post.css" rel="stylesheet">
+
+    <script src="js/scripts/angular/angular.min.js"></script>
+    <script src="js/scripts/angular-material/angular-material.min.js"></script>
+    <script src="js/scripts/angular-route/angular-route.min.js"></script>
+    <script src="js/scripts/ngstorage/ngStorage.min.js"></script>
+
+  </head>
+
+  <body ng-app = "progressApp" >
+
+    <!-- Navigation -->
+	
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Progress Control System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="dropdown">
+                <li class="btn btn-default dropdown-toggle"  data-toggle="dropdown" id = "d">Huddles
+                <span class="caret"></span></li>
+                <ul class="dropdown-menu">
+                  <a class = "linkm" href="#!/huddles">huddles</a>
+                </ul>
+              </div>
+      
+              <div class="dropdown">
+              <li class="btn btn-default dropdown-toggle" data-toggle="dropdown" id = "d">Leave
+                <span class="caret"></span></li>
+                <ul class="dropdown-menu">
+                   <a class = "linkm" href="#!/leave"> Request Leave </a> 
+                   <a class = "linkm" href="#!/leave2"> Leave Table </a> 
+                </ul>
+              </div>
+      
+              <div class="dropdown">
+                <li class="btn btn-default dropdown-toggle"  data-toggle="dropdown" id = "d"> Hardware
+                  <span class="caret"></span></li>
+                  <ul class="dropdown-menu">
+                    <a class = "linkm" href="#">Automation</a>
+                  </ul>
+                </div>
+      
+                <div class="dropdown">
+                  <li class="btn btn-default dropdown-toggle"  data-toggle="dropdown" id = "d">Location
+                    <span class="caret"></span></li>
+                    <ul class="dropdown-menu">
+                      <a class = "linkm" href="#">My Location</a>
+                        <a class = "linkm" href="#">Add Site</a>
+                    </ul>
+                  </div>
+      
+                  <div class="dropdown">
+                      <li class="btn btn-default dropdown-toggle"  data-toggle="dropdown" id = "d">Site Users
+                        <span class="caret"></span></li>
+                        <ul class="dropdown-menu">
+                            <a class = "linkm" href="#">Employees</a>
+                  </ul>
+                </div>
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" id = "userin" href="#">User</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id = "userout" href="#">Logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<div class = "container">
+    <!-- Page Content -->
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-12">
+        <br>
+      <br>
+    
+<div class="container">
+          <div class="row">
+
+              <div class="col-md-4"></div>
+            
+              <div class="col-md-4">
+          <h3></h3>
+          <div class="card" id = "chat">
+            <div class="card-body" align ="left">
+		
+                <strong><h3> {{type}} leave approved for<br><br> </strong></h3>
+                <h4>  SLI </h4>
+                              
+                  <div class="form-group">
+                  </div>
+                  
+            </div> 
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+</div><br><br><br><br><br><br>
+    </div>
+  <!-- Page Content -->
+  <!--
+  <div ng-view = ""> <div class="container">
+      <div class="row" align ="center">
+          <div class="col-md-4"></div>
+            
+          <div class="col-md-4">
+      <h3></h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="card">
+        <div class="card-header"> <strong> Login To Progress Contol System </strong> </div>
+        <div class="card-body" align ="left">
+        
+            <form>
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+              </div>
+              <div class="form-group form-check">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div></div>
+  </div> View END !-->
+  <!--<br><br><br>-->
+    <!-- /.container -->
+
+    <!-- Footer -->
+  </div>
+</div>
+</div>
+  
+    <footer class="py-5 bg-dark" id = "footer">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; PCS 2019</p>
+      </div>
+      <!-- /.container -->
+    </footer> 
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- routes -->
+    <script src="js/app.js"></script>
+    <!-- Controllers and services -->
+    <script src="js/services/createAccountService/createAccountService.js"></script>
+    <script src="js/services/loginService/loginService.js"></script>
+    <script src="js/services/usersService/usersService.js"></script>
+    <script src="js/services/sendMessages/sendMessagesService.js"></script>
+    <script src="js/services/huddleService/huddleService.js"></script>
+
+    <script src="js/controllers/createController/createController.js"></script>
+    <script src="js/controllers/usersController/usersController.js"></script>
+    <script src="js/controllers/loginController/loginController.js"></script>
+    <script src="js/controllers/activateController/activateController.js"></script>
+    <script src="js/controllers/emailController/emailController.js"></script>
+    <script src="js/controllers/smsController/smsController.js"></script>
+    <script src="js/controllers/leaveController/leaveController.js"></script>
+
+    <script src="js/controllers/confirmController/confirmController.js"></script>
+    <script src="js/controllers/forgotController/forgotController.js"></script>
+    <script src="js/controllers/huddleController/huddleController.js"></script>
+	
+  </body>
+
+</html>

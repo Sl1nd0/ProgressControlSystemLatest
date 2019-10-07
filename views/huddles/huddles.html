@@ -1,0 +1,89 @@
+<div class="container" id = "responsive">
+
+  <div class="row" >
+
+
+
+<div class="card" id = "chat">
+
+            <div class="card-body" >
+              <div align = "center"> <a href = "" ng-click = "showDev()"> Developer Huddles </a> </div>	  
+              <div align = "center"> <a href = "" ng-click = "showCon()"> Consultant Huddles </a> </div>
+              <div align = "center"> <a href = "" ng-click = "showSupp()"> Support Huddles </a> </div>	  	
+                 <div align = "center"> <h2 class="mt-4" > {{htype}} Daily Huddles </h2> </div>
+
+        <form>
+
+        <table class="table table-responsive" id = "mytable" align = "center">
+
+            <thead>
+              <tr>
+                  <th> Accomplish Date </th>
+                  <th > Name </th>
+                <th >Accomplished Yesterday</th>
+                <th>Accomplished Today</th>
+                <th>Obstacles</th>
+                <th>Need help</th>
+                <th> </th>
+              </tr>
+            </thead>
+
+            <tbody>
+               <tr ng-repeat="huddle in Huddles">
+                    <td> {{huddle.Date}} </td>
+                    <td> {{huddle.empName}} </td>
+                    <td> {{huddle.accomplishY}} </td>
+                    <td> {{huddle.accomplishT}} </td>
+                    <td> {{huddle.mobstacles}} </td>
+                    <td> {{huddle.needHelp}} </td> 
+                    <td> <button type="button" ng-click = "removePost(huddle.huddleid)" class="btn btn-danger">Remove</button></td> 
+              </tr>
+                <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+
+            </tbody>
+
+          </table>
+  
+<div align = "center"> <a href = "" ng-click = "showUpdate()"> Update Huddles </a> </div>	  
+
+    <div ng-show = "updateHuddle">
+        <div align = "center"> Update for <b> {{empName1}} </b> 
+            <br> Accomplish Date <input type="date" ng-model = "huddledate" name= 'bday' name = 'date1' style="width:154px"> <br>
+        </div> <br>
+        
+            <!-- Input Fields -->
+            <!-- Player 1 Name Input Field -->
+            <div align = "center">
+            <div class="input-field-div">
+<b> Accomplish Yesterday </b>
+              <textarea class="form-control md-textarea" ng-model = "yesterday" name="message" rows="8" cols="20"> </textarea>
+            </div>
+            <!-- Player 2 Name Input Field -->
+            <div class="input-field-div">
+<b> Accomplish Today </b>
+              <textarea class="form-control md-textarea"  ng-model = "today"  name="message" rows="8" cols="20"> </textarea>
+            </div>
+            <div class="input-field-div">
+<b> Obstacles </b>
+              <textarea class="form-control md-textarea"  ng-model = "obstacles"  name="message" rows="8" cols="20"> </textarea>
+          </div>
+          <div class="input-field-div">
+<b> Needs Help </b>
+            <textarea class="form-control md-textarea"  ng-model = "help"  name="message" rows="8" cols="20"> </textarea>
+          </div>
+        </div><br>
+          <div align = "center">
+          <button type="button" ng-click = "updateHuddles()" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" ng-click = "hideUpdate()">Cancel</button>
+          </div>
+      </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div><br><br><br><br><br><br>
+
+</div>

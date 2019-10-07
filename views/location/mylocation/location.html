@@ -1,0 +1,55 @@
+     <div class="container">
+          <div class="row">
+ <!-- Post Content Column -->
+ <div class="col-lg-4"> 
+            <br>
+              <div class="card  bg-info">
+             
+              <div class="card-body">
+                  <div class="card" >
+                     
+                      <div class="card-body">
+                          <strong> Post Current Location </strong> <br>
+                          <hr>
+                        <form>
+                             <!--   <h1 ng-style="myObj">Welcome</h1><br><br>  GOOD EXAMPLE--> 
+
+                            <div ng-repeat = "site in sites">
+                            <button type="button" ng-click = "postLocation(site.sitename)"  class="btn btn-primary" style = "background-color: {{site.sitecolor}}">  {{site.sitename}}  </button> 
+                            <button type="button" ng-click = "postLocationLeave(site.sitename)"  class="btn btn-primary" style = "background-color: {{site.sitecolor}}">  Leave  </button><br><br>
+                            </div>
+
+                            <hr>
+                            <b>Message </b><br>
+                            <input type="text" ng-model = "other" class="form-control" name="other" value=""><br>
+                            <button type="button" ng-click = "postLocationOther(other)" class="btn btn-success">Submit</button>
+                            
+                        </form>
+                      </div>
+                  </div>
+
+              </div>
+			  
+
+            </div>
+			</div>
+			
+	 <div class="col-lg-6"> <!-- START -->
+        <br>
+        <div  ng-repeat= "loc in locations">
+        <div class="card" id = "chat">
+            <div class="card-body">
+            <b> {{loc.username}} {{loc.usersurname}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{loc.locationdate}} </b><br>
+                {{loc.locmessage}}
+        </div>
+        </div><br>
+    </div>
+		
+    </div> 
+     <!-- END -->
+         
+
+    </div><br><br><br><br><br><br>
+
+    </div>
+	

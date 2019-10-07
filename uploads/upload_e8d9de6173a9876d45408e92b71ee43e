@@ -1,0 +1,2016 @@
+
+mkatsh_l
+Assur100!!U
+
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+npm install johnny-five --msvs_version=2017
+192.168.8.114			--This IP is for the nodemcu
+
+//	10.211.110.133\MDPAGINST11A  -- PRODUCTION
+//	10.211.110.134\MDPAGINST11B  -- TEST
+
+db.getCollection('picklists').find({ 'toteID' : /0$/})
+
+358003070152584
+
+1,2,3
+
+bodyguard -- movie
+
+MTN
+
+	 30122326
+
+connxion
+http://10.211.110.131:8084
+
+REQ000000699856
+
+10.211.126.9(Preferred)
+
+wareHouse Expert
+
+
+http://10.211.110.130/SCExpert/m4nScreens/Login.aspx
+
+apexSilindokuhle
+@Sli2354
+
+836686
+
+
+https://forkawesome.github.io/Fork-Awesome/ -----> This one
+
+==========================================
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+0000206
+
+
+https://expressjs.com/en/guide/database-integration.html
+
+*Imp Corses*
+https://www.youtube.com/watch?v=AFiqctkoVJ4&index=1&list=PLillGF-RfqbaEmlPcX5e_ejaK7Y5MydkW
+
+*
+#Autobag
+pm2 restart conveyor
+*
+
+linux Server WCS
+//PASSWORDZ .....................
+klopp_f_sa
+C@itlin1406
+
+
+#Issues in warehouse
+---WCS!!!!
+
+//for PUTTY ...............
+klopp_f_sa
+//PASSWORDZ .....................
+klopp_f_sa
+C@itlin1406
+
+sudo su -
+pm2 list      //Checking all the services whether they are up and running.
+
+///
+pm2 show      //Service Name//
+
+//Showing the logs   ---- Programs running for wcs!
+pm2 log CONVEYOR
+pm2 log WMS_STATUS
+etc
+
+// This is for accessing the order ID.
+
+'orders.orderID':'1669768_1'
+
+//goto the bottom..
+Shift g
+
+// exit without saving file log ...
+:q!
+
+======================================================
+//WHEN IM FIXING THE CONVEYOR BELT PROBLEM !!!
+//sudo su -
+then 
+//pm2 restart CONVEYOR
+
+//CHecking the status on connXion..........
+and on WMS
+
+..ShipUpdate
+
+it should change to shipped, if it duznt there's a problem!
+
+
+
+
+
+///////////////////////////////////////////////////////////////// 2018-09-17
+
+The update query should be only for PICKED nd PACKED not SHIPPED
+
+and should it be 150 or More  I call Lungelo, else I run it.
+
+Select * form SCE
+
+
+
+///////////////////////////////////////////////////////////////////
+--Roy Stock Take Query
+
+select * from apx_serial where loadID = '1000430343'
+
+
+select * from loaDATTRIBUTES where loadID = '1000430343'
+
+
+
+update loadATTRIBUTES set kosHER = 1 where loadid = '1000013678'
+
+////////////////////////////////////////////////////////////////////
+
+
+PASSWORD: admin1stratoR
+
+
+Rhochrematics wifi
+
+"transporterID": {$ne: null} , "Status": "SHIPPED"
+
+
+
+Location, SKU, Quantity [Unitsavailable]    ......
+//Find everything in loction which starts with VSU.
+
+
+http://10.211.110.139:8087/  
+
+///My stuff to understand.. ///
+
+pallet handover problem....
+
+https://esp8266-shop.com/blog/websocket-connection-between-esp8266-and-node-js-server/
+
+https://www.engineersgarage.com/contribution/controlling-led-lights-web-server-using-esp8266-wi-fi-module-based-iot-device
+
+192.168.8.131 --- MY ESP IP Address
+
+*70043871
+
+
+ 
+
+
+BEST NOde site
+
+https://linuxhint.com/postgresql-nodejs-tutorial/
+
+
+///////////////////////////////////////////////////////////////////////
+
+https://www.tooplate.com/
+
+///////////////////////////////////////////////////////////////////////
+
+https://developers.google.com/discovery/v1/getting_started
+
+///////////////////////////////////////////////////////////////////////
+
+http://10.1.82.130:8084/#/pickListInfo ------ Jetpark
+@Sl12354
+http://10.211.110.131:8084    ------ 311 Warehouse
+/////////////////////////////////////////////////////////////////////
+
+
+1762370_1 ---ORDER NUMBER  , 1 pick line hasn't dropped
+
+('Support Group Name'  = "WMS Support" OR 'Support Group Name'  = "WMS 2nd Line Support") AND 'Submit Date' > "05/11/2018 12:00:00 AM"
+
+'Notes' LIKE "%2370119_1%" AND 'Submit Date' > "05/01/2019 12:00:00 AM"
+
+437087
+Iyazi@Amilla@2013!!
+
+('Request Assignee' LIKE "Lungelo%" OR 'Request Assignee' LIKE "Pierre%") AND 'Submit Date' > "1/01/2019 00:00:00 AM"
+2328454_1
+('Request Assignee' LIKE "Chelaine%" OR 'Request Assignee' LIKE "Silindokuhle%") AND 'Submit Date' > "8/05/2019 00:00:00 AM"
+
+REQ0000001148099
+
+Vha Mudzimu wanga
+
+('Request Assignee' LIKE "Pierre%" AND 'Submit Date' > "3/25/2019 00:00:00 AM") AND 'Status*' != "Completed" --Check for Pierre
+
+'Customer Email' LIKE "%Fikile.Mthimkhulu@mtn.com%" AND 'Submit Date' > "3/25/2019 00:00:00 AM"
+
+Fikile Mthimkhulu
+('Request Assignee' LIKE "Fikile Mthimkhulu%" AND 'Submit Date' > "1/01/2019 00:00:00 AM") AND 'Status*' != "Completed"
+
+('Request Assignee' LIKE "Pierre%" AND 'Submit Date' > "3/14/2019 00:00:00 AM") AND 'Status*' != "Completed" AND 'Status*' != "Rejected" AND 'Status*' != "Cancelled"  AND 'Status*' != "Closed"
+
+https://www.youtube.com/watch?v=a_tdG9yM93A
+
+
+--*Include "OrderNumber" and the "STATUS" for the qtyPerSku report.
+
+60331778
+
+WO00000000945290
+  
+background-color: #4CAF50;  	REQ000000370873
+
+357678106153127
+
+MTNDR00027591
+
+10.1.87.51
+
+
+
+
+https://servicedesk.mtn.co.za/arsys/shared/login.jsp?/arsys/forms/servicedeskapp.mtn.co.za/SRS%3AServiceRequestConsole/Default+Administrator+View/?cacheid=15bcc3d2
+
+438505
+
+--2 tables we nid to pull ...
+
+https://console.developers.google.com/projectselector2/apis/dashboard?supportedpurview=project&project&folder&organizationId
+
+//PUTTY IP:
+
+10.211.110.131
+mkatsha_l_sa
+Amilla@100!!
+
+1964743_1
+
+//REMEDY
+437087
+Amilla@100!!
+
+
+
+Silindokuhle Nkabinde <silindokuhle.nkabinde@apex-rts.co.za>
+Attachments
+Fri, 8 Feb, 13:36 (6 days ago)
+to Lungelo
+
+db.getCollection('picklists').find({'CreateDate':{$gte:"2019-01-16 19:00"}, 'Status':'NEW'})
+12
+ 
+
+ 
+
+    "PickRegion" : "DR-RETAIL",
+
+    "PickType" : "PARTIAL",
+
++13365422220
+
+668274
+=========================================
+CLIVE CREDINTIALS --
+MTNGROUPSA\matlawa_c_sa
+Ap3x-rt5
+--------------------------------
+
+Quantity mismatch , Tote qty not matching physical qty , currently can not resolve on system , can not amend qty to release tote 
+
+
+
+
+Serials receipted on REMEDY and then on WMS are going into held status and we are unable to hand over stock . please determine cause. refer to ticket REQ000000654306 as well for examples 
+
+
+Pallets not reflecting on IOMS due to pallets being stuck on Held Status
+
+Request Categories:
+-------------------------
+Category 1 - BUSINESS APPLICATIONS
+Category 2 - ORACLE ERP
+Category 3 - WAREHOUSE
+Category 4 - 
+
+Questions and Answers: 
+-------------------------
+Complexity - Pallets not reflecting on IOMS due to pallets being stuck on Held Status
+
+
+Good morning team
+
+Trust you well
+
+Can you please be advised that we can't or unable to receive the new stock due to a wrong IMEI number for the Huawei P10 GOLD(865545032908236) on the slip from Warehouse and the actual device that we have in store for the HUAWEI P10 GOLD (865545036463451). Please assist and escalate this matter to the relevant department to try to sort it out and assist.
+
+Customer order number: 844295
+Invoice number: 10000113412
+
+Thanks
+P Ndayi
+
+
+----------------
+
+Hi May you please assist on generating the invoice for stock received by our dealers. Invoice 1000071091 for Bouwer Post Paid Account 1353 and Invoice  1000071620 for The Core Post paid Account
+37630 .
+ 
+Complexity: high
+
+
+
+
+
+
+
+
+http://127.0.0.1:49760/browser/
+
+*	60304208
+
+grep 358606061490613 /root/.pm2/logs/SERIAL-PUSH-out-9.log
+vi /root/.pm2/logs/SERIAL-PUSH-out-9.log  
+grep 1870009_1 /root/.pm2/logs/SERIAL-PUSH-out-9.log
+
+grep 30155320/root/.pm2/logs/CONVEYOR.log 
+
+
+===
+grep '40362736' /root/.pm2/logs/CONVEYOR-out-16.log
+
+-- 1899425_1
+
+*REMINDER TO :
+
+CHECK with clive for Lungelo's Account ...
+
+-- 
+*HW Query  * MYB *
+*Connect SCEXPERTConnectTrans and OUTBOUNDH Q
+*Karen RESEARCH! on Orders 
+
+
+EXCEL COMPARISON ->
+
+=IF(A2<>ABS(C2);0;1)
+
+--1
+Quantity mismatch , Tote qty not matching physical qty , 
+currently can not resolve on system , can not amend qty to release tote 
+
+--2
+Serials receipted on REMEDY and then on WMS are going into held status 
+and we are unable to hand over stock . please determine cause. refer 
+to ticket REQ000000654306 as well for examples 
+
+--3
+Good morning team
+
+Trust you well
+
+Can you please be advised that we can't or unable to receive the new stock due to a wrong IMEI number
+ for the Huawei P10 GOLD(865545032908236) on the slip from Warehouse and the actual device that 
+we have in store for the HUAWEI P10 GOLD (865545036463451). Please assist and escalate
+ this matter to the relevant department to try to sort it out and assist.
+
+Customer order number: 844295
+Invoice number: 10000113412
+
+Thanks
+P Ndayi
+
+
+--4
+Hi May you please assist on generating the invoice for stock received by our dealers. 
+Invoice 1000071091 for Bouwer Post Paid Account 1353 and Invoice  
+1000071620 for The Core Post paid Account
+37630 .
+ 
+Complexity: high
+
+22 in serial table
+22 in the PUCKLIST
+
+23 in WMS.
+
+
+217152267
+ 
+
+Pierre Jules Mugengana
+
+Apex Real Time Solutions CC
+
+Work: +27 (0)84 1741002
+
+Cell:    +27 (0)83 3331137
+
+www.apex-rts.co.za
+
+ 
+-- 7317511
+
+db.getCollection('picklists').find({'CreateDate':{$gte:"2019-01-16 19:00"}, 'Status':'NEW'})
+
+ 
+https://www.apowersoft.com/online-video-downloader -- downloader
+ 
+
+    "PickRegion" : "DR-RETAIL",
+
+    "PickType" : "PARTIAL",
+
+
+--REMEDY Reports ...
+
+1. 
+
+Monthly 30 days
+Weekly 7 days
+Daily 1 day
+
+db.getCollection('picklists').find({"PackedDate" : {$gte : "2018-04-16 10:10"}, "PackedDate" : {$lte : "2019-02-15 10:10"}, "toteInUseBy": 12})
+
+------------------------------
+No serial numbers for order line 1
+
+db.getCollection('serials').update({"serial":{$in: []}},
+{$set: {"resyncRequired": true }},
+{multi: true})
+
+Serial numbers for order line 1 is less than the required line quantity - Only have 1800 instead of 2000
+Serial numbers for order line 1 is less than the required line quantity - Only have 1800 instead of 2000
+
+
+--  anyconnect.mtn.co.za
+
+
+--REMEDY SEARCH --
+
+'Submit Date' >= 01/01/19
+
+
+pm2 log CONVEYOR hatch "LEF1"
+pm2 log CONVEYOR | grep LEF1
+
+
+WO0000000896265 --06
+WO0000000895996
+
+db.getCollection('serials').count({'salesOrderID':'1934326_1'})
+
+
+db.getCollection('users').find({"roleID" : {$gte: "2"}})
+
+
+               MTNDR00024689	S1-326992	ASN QUANTITY
+MTNDR00024694	S1-326993	ASN QUANTITY
+MTNDR00024701	S1-326995	ASN QUANTITY
+MTNDR00024703	S1-326997	ASN QUANTITY
+MTNDR00024683	S1-326996	ASN QUANTITY
+MTNDR00024690	S1-326998	ASN QUANTITY
+MTNDR00024691	S1-326999	ASN QUANTITY
+MTNDR00024681	S1-327000	ASN QUANTITY
+MTNDR00024684	S1-327001	ASN QUANTITY
+
+Desk number/Location: midrand warehouse
+
+
+HC46499851
+HC46499853
+
+
+
+
+
+console.developers.google.com/
+
+
+
+UPDATE QUERY, MULTI UPDATE in MONGODB
+
+db.getCollection('picklists').update({'orders.cartonID': {$in : ['30122023',
+'60333092',
+'30122023',
+'30156442',
+'60333092',
+'60333987',
+'30156442',
+'60333987',
+'40424786',
+'60334172',
+'40424786'
+]}}, {$set: {'ShipUpdateRequired': true, 'WmsOrderStatus' : 'SHIPPED', 'WmsSerialsUpdated' : false}}, {multi: true})
+
+
+db.getCollection('picklists').update({'orders.orderID': {$in : ['2092121_1',
+'2093760_1',
+'2093764_1',
+'2093769_1',
+'2093770_1',
+'2093774_1',
+'2093776_1',
+'2092744_1',
+'2092745_1',
+'2092752_1',
+'2092753_1',
+'2092764_1',
+'2092774_1',
+'2076207_1',
+'2076211_1',
+'2076212_1',
+'2076222_1',
+'2076231_1',
+'2076285_1',
+'2076289_1',
+'2076305_1',
+
+]}}, {$set: {'ShipUpdateRequired': true, 'PackUpdateRequired' : true, 
+'WmsSerialsUpdated' : false}}, {multi: true})
+
+'NEW', 'PLANNED', 'RELEASED', 'PICKED', 'PACKED'
+
+'orders.orderID':'2079486_1', 'orders.items.serials' : []
+
+
+(.\netsh wlan show profiles) | Select-String “\:(.+)$” | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(.\netsh wlan show profile name=”$name” key=clear)}  | Select-String “Key Content\W+\:(.+)$” | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -Wrap
+
+
+@Sl12354
+
+
+db.getCollection('picklists').find({'orders.orderID': {$in : ['2082774_1',
+'2083393_1',
+'2061260_1',
+'2061210_1',
+'2092864_1']}, 'orders.items.serials' : []})
+
+
+
+db.getCollection('picklists').find({$and: [{'orders.actualWeight2': {$ne : null}}, {'orders.actualWeight1' : null}, {'Status':'SHIPPED'}, {'dispatched': true}, {'orders.WmsPickListStatus' : 'COMPLETE'}, {'CreateDate' : {$gte : '2019-01-01'}}]})   -- this one ...
+
+
+db.getCollection('picklists').find({$and: [{'orders.actualWeight2': {$ne : null}}, {'orders.actualWeight1' : null}, {'Status':'SHIPPED'}, {'dispatched': true}, {'orders.WmsPickListStatus' : 'COMPLETE'}]})
+
+db.getCollection('picklists').find({$and: [{'orders.actualWeight2': null}, {'orders.actualWeight1' : {$ne : null}}, {'Status':'SHIPPED'}, {'dispatched': true}, {'orders.WmsPickListStatus' : 'COMPLETE'}]})
+
+
+db.getCollection('picklists').update({'orders.orderID': {$in : ['2121200_1',
+'2121544_1',
+'2121845_1',
+'2121845_1',
+'2121886_1',
+'2098647_1',
+'2098647_1',
+'2099928_1',
+'2099928_1',
+'2101345_1',
+'2101345_1',
+'2101345_1']}}, {$set : {'Status': 'SHIPPED', 'orders' : {'WmsOrderStatus': 'SHIPPED'}}}, {multi : true})
+
+
+
+jncala - Matflo usename
+slee.. passw -- Matflo username
+
+connstring = "ODBC;DSN=CELL-C-MIS-UAT;UID=matflo;PWD=MATFLO_123;Database=wmsprd
+
+vodtest --- username
+#password007    -- password
+ 10.0.20.34
+
+Ram DB
+Server : WMSREPORTSQL
+Alanwms -- username
+T3A6vwCl -- Password
+
+esptool.py --port com10 
+--baud 115200 write_flash \
+--flash_freq 80m  -fm dio \
+--flash_size 4MB \
+0x0000 boot_v1.6.bin \
+0x1000 espruino_esp8266_user1.bin \
+0x3FC000 esp_init_data_default.bin \
+0x3FE000 firmware/blank.bin \
+
+
+
+
+$ esptool.py --port com10\ --baud 115200 write_flash \ --flash_freq 80m  -fm dio \ --flash_size 4MB \  0x0000 boot_v1.6
+.bin \ 0x1000 espruino_esp8266_user1.bin \ 0x3FC000 esp_init_data_default.bin \ 0x3FE000 firmware/blank.bin \
+
+
+https://iwatchgameofthrones.net/
+
+
+cmatlawa
+Ghost@03
+
+
+http://10.211.110.138/SCExpert/m4nscreens/dteditor.aspx?sc=-dt
+http://10.211.110.138/SCExpert/m4nscreens/DTEditor.aspx?page=1&app_id=0&dt_id=381
+
+-====VIEWS=====-
+
+SELECT * FROM INFORMATION_SCHEMA.VIEW_TABLE_USAGE
+WHERE VIEW_NAME = 'vLOADATTRIBUTESDESK'
+
+
+
+---=======
+--get view script
+USE SCEXPERT_QA1 -- DATABASE NAME
+GO
+SELECT DEFINITION
+  FROM sys.sql_modules  
+ WHERE object_id = OBJECT_ID('DBO.vLOADATTRIBUTESDESK')  -- DBO IS WHAT IS BEING USED HERE
+
+
+
+
+http://10.0.21.33/cgi-bin/web_om_vc.exe
+
+
+alanr    R3b3k@h1
+
+
+
+
+
+
+
+
+
+
+SELECT  
+             DATEPART(HOUR, st_date) as HOUROFDAY , st_oper_id as USERID, Sum(st_qty) as QUANTITY   
+             FROM  
+             xtl.dbo.mi_pick  
+             WHERE  
+             st_op_type = 'PICK_PACKED' and st_oper_id is not null  and  
+             st_date >= ''  
+             and st_date < DATEADD(DAY, 1,  
+             '' 
+            )  
+             GROUP BY  
+             DATEPART(HOUR, st_date), st_oper_id  
+             ORDER BY  
+             DATEPART(HOUR, st_date), st_oper_id 
+            
+
+
+http://10.0.21.33/cgi-bin/web_om_vc.exe?wid=1320981584053014350&cachetime=1559737886.759770&rec=-1&workloc=None&scr=blank#scr=wavelist&wid=1320981584053014350&cachetime=1559737886.758705&cachetime2=1559738626289
+
+sudo su - wcsadm
+
+
+https://www.youtube.com/watch?v=ZZue71GksbA
+
+
+https://passwordselfservice.mtn.co.za/
+
+
+
+
+SELECT  
+st_date, cast(st_date as time) as myTime, st_op_type, st_order_num, 'N/A', st_product, st_dest_tm_id, st_oper_id, st_serial_number, st_qty
+            FROM 
+   xtl.dbo.mi_pick  
+   WHERE st_op_type = 'PICK_PACKED' and   
+ st_serial_number = ''
+
+
+
+Test Totes
+10519911 -- same OrderID    CancelledBY   -- P000969750
+10519540  -- Diff OrderID
+, {pickListID : 'P000932325'}, {pickListID : 'P000932327'}
+
+//TEST DATA HERE {'orders.pickListID' : {$in: ['P000932325', 'P000932327']}
+P000932312
+P000932327 2218529_1
+
+
+JSON.parse(req.params.ToDo)
+
+
+
+P000932312
+P000932317
+P000932327
+
+
+db.getCollection('picklists').insert({"test":"a"})
+
+
+db.getCollection('picklists').update({} , {$set : {"new_field": 1}}, false,true)
+
+
+
+
+
+
+
+
+
+
+{
+    "_id" : ObjectId("5d07f59e7cef07fac2c3d4fc"),
+    "ReadyToRemove" : false,
+    "SmallOrder" : false,
+    "Consolidate" : false,
+    "PickRegion" : "311PTL",
+    "PickType" : "PARTIAL",
+    "PickListType" : "WCS_MASTER",
+    "CreateDate" : "2019-05-29 06:50",
+    "ShipUpdateRequired" : false,
+    "PackUpdateRequired" : false,
+    "PickUpdateRequired" : false,
+    "FromTote" : null,
+    "Status" : "PICKED",
+    "PackedDate" : null,
+    "orders" : [ 
+        {
+            "_id" : ObjectId("5cee0f3d66a05d57645a5112"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5cee0f3d66a05d57645a5114"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 722500,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "majobe_p",
+                    "serialised" : true,
+                    "sku" : "7339518",
+                    "barcode" : "8801643832780",
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "12",
+                    "location" : "CPZ12B36P12",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 341,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "SAMSUNG GALAXY SM-A30 (5FZKEXFA) 2019 BLACK CT",
+                    "itemCode" : "SAMSUNG GALAXY SM-A30 (5FZKEXFA) 2019 BLACK CT"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0f3d66a05d57645a5113"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 2,
+                    "orderLine" : 2,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "priorityLevel" : "10",
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000932312",
+            "numberOfTotes" : 1,
+            "toteNumber" : 1,
+            "cartonID" : "10519540",
+            "orderID" : "2217944_1"
+        }, 
+        {
+            "_id" : ObjectId("5cee0f4466a05d57645a5127"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5cee0f4466a05d57645a512a"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 816000,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 3,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "mangen_m",
+                    "serialised" : true,
+                    "sku" : "7271553",
+                    "barcode" : "6009880853328",
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "5",
+                    "location" : "CPZ05B15P31",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 320,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Mobicel Vega Space grey CT",
+                    "itemCode" : "Mobicel Vega Space grey CT"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0f4466a05d57645a5129"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 2,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0f4466a05d57645a5128"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 3,
+                    "orderLine" : 2,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "priorityLevel" : "10",
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000932317",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2218337_1"
+        }, 
+        {
+            "_id" : ObjectId("5cee0f4566a05d57645a512c"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5cee0f4566a05d57645a512e"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 314944,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 2,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "ngoman_s",
+                    "serialised" : true,
+                    "sku" : "7249426",
+                    "barcode" : "6901443236619",
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "6",
+                    "location" : "PPZ06B17P01",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 120,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Huawei E5573Bs-322 (51071QSK) Router White CT",
+                    "itemCode" : "Huawei E5573Bs-322 (51071QSK) Router White CT"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0f4566a05d57645a512d"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 2,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "priorityLevel" : "10",
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000932318",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2218367_1"
+        }, 
+        {
+            "_id" : ObjectId("5cee0fb266a05d57645a5256"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5cee0fb266a05d57645a5258"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 816000,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "mangen_m",
+                    "serialised" : true,
+                    "sku" : "7271553",
+                    "barcode" : "6009880853328",
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "5",
+                    "location" : "CPZ05B15P31",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 320,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Mobicel Vega Space grey CT",
+                    "itemCode" : "Mobicel Vega Space grey CT"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0fb266a05d57645a5257"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 2,
+                    "orderLine" : 2,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "priorityLevel" : "10",
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000932321",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2218463_1"
+        }, 
+        {
+            "_id" : ObjectId("5cee0fb866a05d57645a526b"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5cee0fb866a05d57645a526d"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 816000,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 2,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "mangen_m",
+                    "serialised" : true,
+                    "sku" : "7271553",
+                    "barcode" : "6009880853328",
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "5",
+                    "location" : "CPZ05B15P31",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 320,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Mobicel Vega Space grey CT",
+                    "itemCode" : "Mobicel Vega Space grey CT"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0fb866a05d57645a526c"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 2,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "priorityLevel" : "10",
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000932325",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2218500_1"
+        }, 
+        {
+            "_id" : ObjectId("5cee0fbb66a05d57645a5272"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5cee0fbb66a05d57645a5274"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 816000,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "mangen_m",
+                    "serialised" : true,
+                    "sku" : "7271553",
+                    "barcode" : "6009880853328",
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "5",
+                    "location" : "CPZ05B15P31",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 320,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Mobicel Vega Space grey CT",
+                    "itemCode" : "Mobicel Vega Space grey CT"
+                }, 
+                {
+                    "_id" : ObjectId("5cee0fbb66a05d57645a5273"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 2,
+                    "orderLine" : 2,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "zulu_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 2,
+                    "qty" : 2,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "priorityLevel" : "10",
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000932327",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2218529_1"
+        }
+    ],
+    "dispatchedDate" : null,
+    "dispatched" : false,
+    "toteInUseBy" : "24",
+    "toteInUse" : true,
+    "packType" : "PUT",
+    "packTimeHour" : null,
+    "containerLocation" : null,
+    "destination" : null,
+    "transporterID" : null,
+    "toteID" : "10519540",
+    "__v" : 12,
+    "new_field" : 1.0
+}
+
+
+
+
+
+{
+    "_id" : ObjectId("5d09c281d07d4a20546e3692"),
+    "ReadyToRemove" : false,
+    "SmallOrder" : false,
+    "Consolidate" : false,
+    "PickRegion" : "311PTL",
+    "PickType" : "PARTIAL",
+    "PickListType" : "WCS_MASTER",
+    "CreateDate" : "2019-06-19 07:05",
+    "ShipUpdateRequired" : false,
+    "PackUpdateRequired" : false,
+    "PickUpdateRequired" : false,
+    "FromTote" : null,
+    "Status" : "PICKED",
+    "PackedDate" : null,
+    "orders" : [ 
+        {
+            "_id" : ObjectId("5d09c271feb9041eb3ab0684"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5d09c271feb9041eb3ab0685"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : "malatj_g",
+                    "pickedBy" : "kenosh_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [ 
+                        "8927000006042783699"
+                    ],
+                    "shortPick" : false,
+                    "packed" : true,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 1,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : true,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000967066",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2244322_1"
+        }, 
+        {
+            "_id" : ObjectId("5d09c272feb9041eb3ab0687"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5d09c272feb9041eb3ab0688"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "kenosh_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000967067",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2244418_1"
+        }, 
+        {
+            "_id" : ObjectId("5d09c274feb9041eb3ab068a"),
+            "items" : [ 
+                {
+                    "_id" : ObjectId("5d09c274feb9041eb3ab068b"),
+                    "PickLineRequired" : false,
+                    "eachVolume" : 10,
+                    "pickListOrderLine" : 1,
+                    "orderLine" : 1,
+                    "uom" : "EA",
+                    "unitPrice" : 0,
+                    "packedBy" : null,
+                    "pickedBy" : "kenosh_l",
+                    "serialised" : true,
+                    "sku" : "5638388",
+                    "barcode" : null,
+                    "checked" : 0,
+                    "serials" : [],
+                    "shortPick" : false,
+                    "packed" : false,
+                    "picked" : true,
+                    "pickZone" : "10",
+                    "location" : "PPZ10B29P03",
+                    "qtyPacked" : 0,
+                    "pickQty" : 1,
+                    "qty" : 1,
+                    "eachWeight" : 10,
+                    "WmsCartonLineStatus" : null,
+                    "itemDescription" : "Contract MultiSim for LTE",
+                    "itemCode" : "Contract MultiSim for LTE"
+                }
+            ],
+            "WmsSerialsUpdated" : false,
+            "WmsPickListStatus" : "COMPLETE",
+            "WmsOrderStatus" : "PICKED",
+            "actualWeight1" : null,
+            "actualWeight2" : null,
+            "transporterWeight" : null,
+            "transporterID" : null,
+            "useTransporter" : false,
+            "packComplete" : false,
+            "orderVerified" : false,
+            "printed" : false,
+            "cartonSize" : 3,
+            "rejectedReason" : null,
+            "rejected" : false,
+            "shipped" : false,
+            "packed" : false,
+            "picked" : true,
+            "picklistVolume" : null,
+            "maxWeightLimit" : null,
+            "minWeightLimit" : null,
+            "picklistWeight" : null,
+            "orderType" : "ONLINEHE",
+            "courierID" : "DSV",
+            "pickListID" : "P000967068",
+            "numberOfTotes" : 1,
+            "toteNumber" : null,
+            "cartonID" : null,
+            "orderID" : "2244438_1"
+        }
+    ],
+    "priorityLevel" : null,
+    "startTime" : null,
+    "dispatchedDate" : null,
+    "dispatched" : false,
+    "toteInUseBy" : "24",
+    "toteInUse" : true,
+    "packType" : "PUT",
+    "packTimeHour" : null,
+    "containerLocation" : null,
+    "destination" : null,
+    "transporterID" : null,
+    "toteID" : "0000175",
+    "__v" : 3
+}
+
+
+
+
+
+-- 2227602_1
+
+http://distro.ibiblio.org/puppylinux/puppy-bionic/bionicpup64/
+
+Software Architecture  in practice
+Pattern Oriented Software Architecture
+
+https://youtu.be/KVicC9tdz90
+
+
+sqlString1 = "SELECT " & _
+            " T.TmId, T.Location, S.ProdCode, S.Qty " & _
+            "FROM " & _
+            "  X_TM T, X_STOCK S " & _
+            "WHERE " & _
+            " T.TmId  = S.TmId and " & _
+            " S.ProdCode Like '" & Range("PalletId").Value & "%' " & _
+            " and T.Location NOT LIKE 'DESPATCH%' " & _
+            " ORDER BY " & _
+            "  T.Location  "
+
+
+-- Need to Modify to check for movement requests
+
+
+
+
+
+
+5980527bef56cf1e886c4a84    
+5980527bef56cf1e886c4a84    "::1"
+
+
+
+
+10.1.46.9
+
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}} <br> <br>
+<input type = "button" value = "confirm" ng-click = "Shine(lastName)"\>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+
+	$scope.Shine = function(val)
+    {
+		alert(val + "  *** mee ");
+	}
+
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+
+</body>
+</html>
+
+
+if (doc.length == 0 || error == null) {
+                res.status(400).send(doc + ' err ' + error + ' ToteID ' + tote + ' is not in the system ');
+            }
+
+
+40472255 -- picked
+
+
+
+                let ind = 0;
+                let pArr = [];
+                let ndx = 0;
+                let removed = 'R';
+                $scope.Func = function(val) //Nice function to get ::::
+                { //It gets the selected ITEMS, the selected checkboxes
+                    removed = 'R';
+                    for (var i = 0; i < ind; i++) {
+                        if (pArr[i] == val) {
+                            //alert('Its stored here, Uncheck it! ' + pArr[i]);
+                            removed = pArr.splice(i, 1); //If the value is there you remove it
+                            ind--;
+                        }
+                    }
+
+                    if (removed != val) 
+                    {
+                        pArr[ind] = val;
+                        ind++;
+                    } else if (removed == val) {
+                        ind = ind; //DO NOTHING ..
+                    }
+                }
+
+
+
+
+var confirm = $mdDialog.alert()
+            .title('The user session was not found. Please log in before requesting the page.')
+            .ok('Ok')
+
+
+db.getCollection('picklists').find({'Consolidate': true}).limit(10)
+
+https://youtu.be/-LwI4HMR_Eg ---- Raspian Postgres 
+
+https://youtu.be/FwTqPmLbDLE --- Remove app 
+1]
+
+
+https://www.coolfreecv.com/
+
+scp file.txt 10.10.10.10:/root/
+
+
+Validate the load as well 
+NOT just the serial status
+
+76340706
+
+
+
+112  --  shipmentsent from transaction
+Plugin Desc 	"OUTBOUND ORDER SHIPMENT UPDATE"
+
+C:\Users\Silindokuhle\Documents\startbootstrap-blog-post-gh-pages
+----- FINAL PROJECT ---------
+
+sudo su - wcsadm
+sudo su -
+
+
+2327603_1
+
+
+
+
+https://www.sowetanlive.co.za/news/south-africa/2019-07-25-cop-among-seven-arrested-for-plotting-cit-heist/
+
+
+
+
+2334729
+
+
+
+{
+    "_id" : ObjectId("5d386ec2a643e222630214e7"),
+    "Sent" : false,
+    "Error" : false,
+    "Result" : "Serials Updated.",
+    "LastUpdateDate" : "2019-07-24 16:44:46",
+    "CreateDate" : "2019-07-24 16:44:18",
+    "Required" : true
+    "OrderId" : "2217812_1",
+    "WcsId" : "60343281",
+    "PickListID" : "P000932202",
+    "__v" : 0
+}
+
+
+
+2335198_1
+
+
+
+
+thapelo
+
+
+10.1.86.136
+
+0000360
+
+//FOR NEWLINEZ
+https://www.youtube.com/watch?v=cEVvn8v8Uak
+//FOR NEWLINEZ
+
+
+10.211.126.29
+
+
+
+
+db.getCollection('serials').find({'SKU' : '7177439', 'last_update_to_wms' : new Date('2018-08-01T00:00:00.000Z') })
+
+https://stackoverflow.com/questions/39092822/how-to-do-confirm-email-address-with-express-node      ------ CONFIRMATION EMAIL TEST  ...... 
+
+
+grep '2353994_1' /root/.pm2/logs/*
+
+
+2275383_1
+
+
+
+
+
+2275382_1
+2275381_1
+2281801_1
+
+
+
+
+1000031479 -- 9 packed picked is 76
+1000018803 -- 14 packed picked is 112
+	
+98   --- 67
+
+
+
+'MTNDR00027793',
+'MTNDR00027791',
+'MTNDR00027857'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "_id" : ObjectId("5d382cd4fa587218de8668d3"),
+    "stationIP" : "10.211.126.10",
+    "stationNumber" : 1,
+    "active" : true,
+    "Cartons" : [ 
+        {
+            "CartonID" : "30579639",
+            "OrderID" : "2365403_1",
+            "MinWeight" : 612,
+            "MaxWeight" : 842,
+            "PicklistID" : "P001064432",
+            "WeightFailReason" : "Transporter Weight Not Within Tolerance",
+            "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff9"),
+            "Items" : [ 
+                {
+                    "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ffa"),
+                    "PackedBy" : "lorraine_1",
+                    "Serialised" : true,
+                    "Barcode" : "6009545304240",
+                    "Sku" : "7294517",
+                    "VerifiedSerials" : [],
+                    "Serials" : [ 
+                        "356154100929483", 
+                        "356154100941645"
+                    ],
+                    "QtyVerified" : 0,
+                    "QtyPacked" : 2,
+                    "QtyOriginal" : 2,
+                    "ItemDescription" : "Samsung J4 Core (J410) Blue PP",
+                    "ItemCode" : "Samsung J4 Core (J410) Blue PP"
+                }
+            ],
+            "transporterID" : "70044476",
+            "WeightCheckComplete" : null,
+            "CartonReason" : null,
+            "CartonProblem" : false,
+            "CartonChecked" : false,
+            "MeasuredWeight" : null,
+            "CartonWeight" : 727
+        }, 
+        {
+            "CartonID" : "30579670",
+            "OrderID" : "2365404_1",
+            "MinWeight" : 1224,
+            "MaxWeight" : 1454,
+            "PicklistID" : "P001064433",
+            "WeightFailReason" : "Transporter Weight Not Within Tolerance",
+            "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff7"),
+            "Items" : [ 
+                {
+                    "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff8"),
+                    "PackedBy" : "lorraine_1",
+                    "Serialised" : true,
+                    "Barcode" : "6009545304240",
+                    "Sku" : "7294517",
+                    "VerifiedSerials" : [],
+                    "Serials" : [ 
+                        "356154100942726", 
+                        "356154100942056", 
+                        "356154100941512", 
+                        "356154100942700"
+                    ],
+                    "QtyVerified" : 0,
+                    "QtyPacked" : 4,
+                    "QtyOriginal" : 4,
+                    "ItemDescription" : "Samsung J4 Core (J410) Blue PP",
+                    "ItemCode" : "Samsung J4 Core (J410) Blue PP"
+                }
+            ],
+            "transporterID" : "70044476",
+            "WeightCheckComplete" : true,
+            "CartonReason" : "Manual Scale Weight Passed",
+            "CartonProblem" : false,
+            "CartonChecked" : true,
+            "MeasuredWeight" : 1364.6,
+            "CartonWeight" : 1339
+        }, 
+        {
+            "CartonID" : "30579671",
+            "OrderID" : "2365405_1",
+            "MinWeight" : 612,
+            "MaxWeight" : 842,
+            "PicklistID" : "P001064434",
+            "WeightFailReason" : "Transporter Weight Not Within Tolerance",
+            "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff5"),
+            "Items" : [ 
+                {
+                    "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff6"),
+                    "PackedBy" : "lorraine_1",
+                    "Serialised" : true,
+                    "Barcode" : "6009545304240",
+                    "Sku" : "7294517",
+                    "VerifiedSerials" : [],
+                    "Serials" : [ 
+                        "356154100942064", 
+                        "356154100942783"
+                    ],
+                    "QtyVerified" : 0,
+                    "QtyPacked" : 2,
+                    "QtyOriginal" : 2,
+                    "ItemDescription" : "Samsung J4 Core (J410) Blue PP",
+                    "ItemCode" : "Samsung J4 Core (J410) Blue PP"
+                }
+            ],
+            "transporterID" : "70044476",
+            "WeightCheckComplete" : null,
+            "CartonReason" : null,
+            "CartonProblem" : false,
+            "CartonChecked" : false,
+            "MeasuredWeight" : null,
+            "CartonWeight" : 727
+        }, 
+        {
+            "CartonID" : "30579673",
+            "OrderID" : "2365406_1",
+            "MinWeight" : 612,
+            "MaxWeight" : 842,
+            "PicklistID" : "P001064435",
+            "WeightFailReason" : "Transporter Weight Not Within Tolerance",
+            "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff3"),
+            "Items" : [ 
+                {
+                    "_id" : ObjectId("5d5d2f43bd7f2a2b4a708ff4"),
+                    "PackedBy" : "lorraine_1",
+                    "Serialised" : true,
+                    "Barcode" : "6009545304240",
+                    "Sku" : "7294517",
+                    "VerifiedSerials" : [],
+                    "Serials" : [ 
+                        "356154100942106", 
+                        "356154100941660"
+                    ],
+                    "QtyVerified" : 0,
+                    "QtyPacked" : 2,
+                    "QtyOriginal" : 2,
+                    "ItemDescription" : "Samsung J4 Core (J410) Blue PP",
+                    "ItemCode" : "Samsung J4 Core (J410) Blue PP"
+                }
+            ],
+            "transporterID" : "70044476",
+            "WeightCheckComplete" : true,
+            "CartonReason" : "Manual Scale Weight Passed",
+            "CartonProblem" : false,
+            "CartonChecked" : true,
+            "MeasuredWeight" : 757,
+            "CartonWeight" : 727
+        }
+    ],
+    "updated_at" : ISODate("2019-08-21T11:47:39.868Z"),
+    "ContainerID" : "70044476",
+    "ScaleManualMode" : true,
+    "LastScannedResult" : "Parcel 30579670 entered weight 1364.6 is within tolerance",
+    "ScaleIP" : "::1",
+    "ScalePort" : 5300,
+    "TempWeightReads" : [],
+    "Inprogress" : null,
+    "ScaleQueryCounts" : 0,
+    "AverageWeight" : null,
+    "__v" : 14264
+}
+
+
+leave email stuff 
+
+is under
+/testCONF
+
+ 
+10v10, 11, 14, 22, 24 , 25, 30, 31, 32
+11v1, 7, 18, 22, 23, 24, 25, 28, 12v9, 11, 14, 18, *24*,   --26--,  27, 
+
+words
+13v2, 3, 4, 7, 9, 25, 
+14v7, 15, *19*, 23, 
+
+proverbs16v
+
+myworkcv951006@gmail.com
+
+2398720_1
+
+
+ONLINE FORMATTER FOR EVERYTHING JO!
+https://www.freeformatter.com/json-escape.html#ad-output
+
+//Handy for passing stuff with newlines etc through uri
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_decodeuricomponent
+
+
+https://www.stackoverflowbusiness.com/blog/what-defines-a-senior-developer
+
+1000165264 
+
+
+https://www.javatpoint.com/
+
+https://www.folio3.com/blog/angularjs-file-upload-example-tutorial/                                                                          
+http://embed.plnkr.co/TX3KpcU1oo4GKY7AB21B/preview
+
+https://stackoverflow.com/questions/38237387/angular-file-upload-with-ng-file-upload
+
+
+
+
+https://stackoverflow.com/questions/24443246/angularjs-how-to-upload-multipart-form-data-and-a-file
+
+
+db.getCollection('picklists').find({'FromTote':'0000115', 'CreateDate': {$gte: '2019-09-01 10:20'}}).limit(50)
+
+
+1. Check 40 smthing 
+which orders, when orders disp, if disp afta or b4 createDate (disp) else [not ok] , if disp on sym order go to order n check the num serialz tht r there 
+
+6 pckstn
+
+
+https://plangoals.herokuapp.com
+
+https://plangoals.herokuapp.com
+
+https://www.npmjs.com/package/multer

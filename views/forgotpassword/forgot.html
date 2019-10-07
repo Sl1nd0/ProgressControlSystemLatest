@@ -1,0 +1,35 @@
+     <div class="container">
+          <div class="row">
+
+              <div class="col-md-4"></div>
+            
+              <div class="col-md-4">
+          <h3></h3>
+          <div class="card" id = "chat">
+            <div class="card-body" align ="left">
+		
+                <strong> Enter email address and phone number for account</strong><br><br>
+                <form>
+                  <div class="form-group">
+                    <label for="code1">Email</label>
+                    <input type="text" ng-model = "email" class="form-control" id="pwd">
+                  </div>
+		<div class="form-group">
+                  <label for="number"> Phone Number </label><br>
+                  <input type="tel" name = "numberpart1" id="numb1" ng-model = "countrycode" style="font-size: 18pt; height: 35px; width:50px;" placeholder="+27"> 
+                   - <input type="tel" name = "number" id="num1" ng-model = "telnumber" style="font-size: 18pt; height: 35px; width:180px;"
+                     pattern="[0-9]{9}" required> 
+                  </div>
+
+                  <div class="form-group">
+                  </div>
+                  <button type="button"  ng-click = "Retrieve()" class="btn btn-primary"> Submit</button>
+		  <button type="button" ng-click = "GoBack()" class="btn btn-primary">Cancel</button>
+                </form>
+    
+            </div> 
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+</div><br><br><br><br><br><br>
+    </div>

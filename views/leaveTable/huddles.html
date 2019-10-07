@@ -1,0 +1,60 @@
+<div class="container" id = "responsive">
+
+  <div class="row" >
+
+
+
+<div class="card" id = "chat">
+
+            <div class="card-body" >
+
+                 <div align = "center"> <h2 class="mt-4" > Employee Leave Status Table </h2> </div>
+
+        <form>
+
+        <table class="table table-responsive" id = "mytable" align = "center">
+
+            <thead>
+
+              <tr>
+                  <th> Leave Date </th>
+                  <th > Employee Name </th>
+                <th Employee Surname</th>
+                <th> Manager Email </th>
+                <th> Leave Type </th>
+                <th> Days Taken </th>
+		<th> Start Date </th>
+		<th> End Date </th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+               <tr ng-repeat="leave in Leaves">
+
+                    <td> {{leave.Date}} </td>
+                    <td> {{leave.empName}} </td>
+                    <td> {{leave.empSur}} </td>
+                    <td> {{leave.empEmail}} </td>
+                    <td> {{leave.empType}} </td>
+                    <td> {{leave.empDays}} </td> 
+		    <td> {{leave.startDate}} </td> 
+		    <td> {{leave.endDate}} </td> 
+
+                <td> <button type="button" ng-click = "removeLeaveApplication(leave.leaveid)" class="btn btn-danger">Remove</button></td> 
+              </tr>
+                <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+
+            </tbody>
+
+          </table>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div><br><br><br><br><br><br>
+
+</div>

@@ -1,0 +1,46 @@
+{
+  "name": "progress_control_system",
+  "version": "1.0.0",
+  "description": "My Final Project - Progress Control System (Helps improve the production of employees)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silindokuhle (Sli)",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-material": "^1.1.19",
+    "angular-route": "^1.7.8",
+    "angular-socket-io": "^0.7.0",
+    "angular-websocket": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "engine": "^1.0.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.16.2",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "multer": "^1.4.2",
+    "mustache-express": "^1.2.8",
+    "nexmo": "^2.5.1",
+    "ngstorage": "^0.3.11",
+    "nodemailer": "^6.3.0",
+    "onoff": "^4.1.4",
+    "path": "^0.12.7",
+    "pg": "^7.11.0",
+    "pi-servo-blaster.js": "0.0.3",
+    "q": "^1.5.1",
+    "request": "^2.88.0",
+    "save": "^2.4.0",
+    "socket.io": "^2.2.0",
+    "twilio": "^3.33.2",
+    "view": "^1.1.1",
+    "ws": "^7.1.2"
+  }
+   "scripts": {
+    "start": "node start.js"
+  }
+}

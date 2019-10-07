@@ -1,0 +1,1087 @@
+var express = require('express');
+var bodyParser = require('body-parser');
+var router = express.Router();
+var pool = require('../config/connect');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var twilio = require('twilio');
+var client = new twilio('AC38c360080cfddb271554c355c83f542d', 'b6ee2e5869d7ac3268dbdbbabfb54ab7');
+var accStatus = 0;
+var nodemailer = require('nodemailer');
+var session = require('express-session');
+var piblaster = require('pi-servo-blaster.js');
+var piblaster2 = require('pi-servo-blaster.js');
+
+var app = express();
+var http = require('http').Server(router);
+var io = require('socket.io')(http);
+
+var Gpio = require('onoff').Gpio;
+var LED1 = new Gpio(4, 'out'); 
+var LED2 = new Gpio(17, 'out');
+//var sent = 0; 
+var w1 = 0;
+var w2 = 0;
+var w3 = 0;
+
+var doorAngle = undefined;
+var windowAngle1 = undefined;
+var windowAngle2 = undefined;
+
+var myData = '';
+
+router.use(session({ secret: '12teqwgds687t97fsersfgk', cookie: { maxAge: 600000 }}))
+ 
+router.get('/API/turnOn:ToDo', function(req, res) {
+
+	if (req.params.ToDo)
+	{
+		let lightNum = req.params.ToDo;
+		if (lightNum == '1')
+		{
+			console.log('ON');
+			//LED1.writeSync(1);
+			return res.status(200).send('1 ON');
+		} else if (lightNum == '2')
+		{
+			console.log('ON');
+			//LED2.writeSync(1);
+			return res.status(200).send('2 ON');
+		}
+	} else {
+		return res.status(400).send('Something went wrong while attempting to switch on light');
+	}
+});
+
+router.get('/API/turnOff:ToDo', function(req, res) {
+
+	if (req.params.ToDo)
+	{
+		let lightNum = req.params.ToDo;
+		if (lightNum == '1')
+		{
+			console.log('OFF');
+			LED1.writeSync(0);
+			return res.status(200).send('1 OFF');
+		} else if (lightNum == '2')
+		{
+			console.log('OFF');
+			LED2.writeSync(0);
+			return res.status(200).send('2 OFF');
+		}
+	} else {
+		return res.status(400).send('Something went wrong while attempting to switch off light');
+	}
+});
+
+router.get('/API/openWindow:ToDo', function(req, res) {
+
+	if (req.params.ToDo)
+	{
+		let windowNum = req.params.ToDo;
+		if (windowNum == '1')
+		{
+			//Window angles starting from 45 to 180 Degrees
+			if (!req.session.currAngle)
+			{
+				req.session.currAngle = 0;
+			}
+			 
+			if (req.session.currAngle == 0 || req.session.currAngle == 45)
+			{	
+				console.log('NOT OPEN AT ALL ' + req.session.currAngle1);
+				openAT90(windowNum, req, res);
+			} else if (req.session.currAngle == 90) {
+				open135AT(windowNum, req, res);
+				//return res.status(200).send('Something went wrong while attempting to open window');
+			} else if (req.session.currAngle == 135) {
+				open180AT(windowNum, req, res);
+			} else {
+				return res.status(200).send("Window " + windowNum + " 180 degrees open!");
+			}
+			//Window angles starting from 45 to 180 Degrees
+
+		} else if (windowNum == '2')
+		{	
+			if (!req.session.currAngle2)
+			{
+				req.session.currAngle2 = 0;
+			}
+			
+			if (req.session.currAngle2 == 0 || req.session.currAngle2 == 45)
+			{	
+				//console.log('NOT OPEN AT ALL ' + req.session.currAngle1);
+				console.log(' WINDOW NUMBER ' + windowNum);
+				openAT90_2(windowNum, req, res);
+			} else if (req.session.currAngle2 == 90) {
+				open135AT_2(windowNum, req, res);
+				//return res.status(200).send('Something went wrong while attempting to open window');
+			} else if (req.session.currAngle2 == 135) {
+				open180AT_2(windowNum, req, res);
+			} else {
+				return res.status(200).send("Window " + windowNum + " 180 degrees open!");
+			}
+		}
+
+	} else {
+		return res.status(400).send('Something went wrong while attempting to open window');
+	}
+});
+
+router.get('/API/closeWindow:ToDo', function(req, res) {
+
+	if (req.params.ToDo)
+	{
+		let windowNumber = req.params.ToDo;
+		console.log(req.session.currAngle + "   <<--->>   " + req.session.currAngle2 + '    ' + w1);
+		if (windowNumber == '1')
+		{
+			if (req.session.currAngle > 45 || w1 == 45)
+			{
+				closeWindow(windowNumber, req, res);
+			} else {
+				return res.status(200).send('Something went wrong while attempting to open window');
+			}
+		} else if (windowNumber == '2')
+		{
+			if (req.session.currAngle2 > 45 || w2 == 45)
+			{
+				closeWindow(windowNumber, req, res);
+			} else {
+				return res.status(200).send('Something went wrong while attempting to open window');
+			}
+		} 
+		
+	} else {
+		return res.status(400).send('Something went wrong while attempting to open window');
+	}
+});
+
+function openAT90(val, req, res)
+{
+	let curAngle = 45;
+	let direction = 1;
+	let sent1 = 0;
+	let delay = 10;
+	
+	if (req.session.currAngle == 90)
+	{ 
+		curAngle = 90;
+		windowAngle1 = curAngle  - 45;
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	} else if (val == '1' && req.session.currAngle <= 45)
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-12", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+			req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 90 && curAngle < 135) {
+				req.session.currAngle = 90;
+				windowAngle1 = req.session.currAngle  - 45;
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngle <= 45) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngle == 90 && sent1 == 0)
+			{	
+				sent1 = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}
+			
+			}, 10);
+	}	
+}
+
+
+function openAT90_2(val, req, res)
+{
+	let curAngle = 45;
+	let direction = 1;
+	let sent1 = 0;
+	let delay = 10;
+	
+	if (req.session.currAngle2 == 90)
+	{ 
+		curAngle = 90;
+		windowAngle2 = curAngle  - 45;
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	} else if (val == '2' && req.session.currAngle2 <= 45)
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-16", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+			//req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 90 && curAngle < 135) {
+				req.session.currAngle2 = 90;
+				windowAngle2 = req.session.currAngle2  - 45;
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngle <= 45) {
+				direction = 0;
+			}
+		
+			sent = 1;
+			if (curAngle == 90 && sent1 == 0)
+			{	
+				sent1 = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}
+			
+			}, 10);
+	}	
+}
+
+function open180AT(val, req, res)
+{
+	let curAngle = 135;
+	let direction = 1;
+	let sent = 0;
+	
+	if (req.session.currAngle == 180)
+	{ 
+		curAngle = 180;
+		windowAngle1 = curAngle  - 45;
+		sent = 1;
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	}
+	
+	if (val == '1')
+	{
+		let refreshId = setInterval(() => {
+		
+			console.log('AT START')
+			piblaster.setServoPwm("P1-12", angleToPercent(curAngle) + "%");
+
+			curAngle += direction;
+			
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 180) {
+				req.session.currAngle = 180;
+				windowAngle1 = req.session.currAngle  - 45;
+				direction = 0;
+				clearInterval(refreshId);	
+			} else if (curAngle <= 135) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngle == 180 && sent == 0)
+			{	
+				sent = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}
+			
+			}, 10);
+		}
+}
+
+
+function open180AT_2(val, req, res)
+{
+	let curAngle = 135;
+	let direction = 1;
+	let sent = 0;
+	
+	if (req.session.currAngle2 == 180)
+	{ 
+		curAngle = 180;
+		windowAngle2 = curAngle  - 45;
+		sent = 1;
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	}
+	
+	if (val == '2')
+	{
+		let refreshId = setInterval(() => {
+		
+			console.log('AT START')
+			piblaster.setServoPwm("P1-16", angleToPercent(curAngle) + "%");
+
+			curAngle += direction;
+			
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 180) {
+				req.session.currAngle2 = 180;
+				windowAngle2 = req.session.currAngle2  - 45;
+				direction = 0;
+				clearInterval(refreshId);	
+			} else if (curAngle <= 135) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngle == 180 && sent == 0)
+			{	
+				sent = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}
+			
+			}, 10);
+		}
+}
+
+function open135AT(val, req, res)
+{
+	let curAngle = 90;
+	let direction = 1;
+	let sent = 0;
+		
+	if (req.session.currAngle == 135)
+	{ 
+		curAngle = 135;
+		windowAngle1 = curAngle  - 45;
+		sent = 1;
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	}
+	
+	if (val == '1')
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-12", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+	
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 135 && curAngle < 180) {
+				req.session.currAngle = 135;
+				windowAngle1 = req.session.currAngle  - 45;
+				direction = 0;
+				clearInterval(refreshId);	
+			} else if (curAngle <= 90) {
+				direction = 0;
+			}
+		
+			if (curAngle == 135 && sent == 0)
+			{	
+				sent = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}	
+		}, 10);
+		}
+}
+
+
+function open135AT_2(val, req, res)
+{
+	let curAngle = 90;
+	let direction = 1;
+	let sent = 0;
+		
+	if (req.session.currAngle2 == 135)
+	{ 
+		curAngle = 135;
+		windowAngle2 = curAngle  - 45;
+		sent = 1;
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	}
+	
+	if (val == '2')
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-16", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+	
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 135 && curAngle < 180) {
+				req.session.currAngle2 = 135;
+				windowAngle2 = req.session.currAngle2 - 45;
+				direction = 0;
+				clearInterval(refreshId);	
+			} else if (curAngle <= 90) {
+				direction = 0;
+			}
+		
+			if (curAngle == 135 && sent == 0)
+			{	
+				sent = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}	
+		}, 10);
+		}
+}
+
+function closeWindow(val, req, res)
+{
+
+    if (val == '1')
+	{
+			
+		let direction = 1; 
+		let curAngle = req.session.currAngle;
+		let closed = 0;
+		let delay = 10;
+			
+		let id = setInterval(() => {
+				
+				piblaster2.setServoPwm("P1-12", angleToPercent(curAngle) + "%");
+				
+				if (curAngle > 45)
+				{
+					curAngle -= direction;
+				}
+			
+				// Change direction when it exceeds the max angle.
+				if (curAngle <= 45) {
+					req.session.currAngle = 45;
+					w1 = 0;
+					windowAngle1 = 0;
+					delay = 1;
+					direction = 0;
+					clearInterval(id);
+				} 
+					
+					if (curAngle <= 45 && closed == 0)
+					{
+						console.log('IN CLOSING');
+						//NGYAYIVALA LANA
+						closed = 1;
+						//NGYAYIVALA LANA
+						console.log('AT END')
+						return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+					} 
+				}, 10);
+	} else if (val == '2')
+	{
+		let direction = 1; 
+		let curAngle = req.session.currAngle2;
+		let closed = 0;
+		let delay = 10;
+			
+		let id = setInterval(() => {
+				
+				piblaster2.setServoPwm("P1-16", angleToPercent(curAngle) + "%");
+				
+				if (curAngle > 45)
+				{
+					curAngle -= direction;
+				}
+			
+				// Change direction when it exceeds the max angle.
+				if (curAngle <= 45) {
+					req.session.currAngle2 = 45;
+					w2 = 0;
+					windowAngle2 = 0;
+					delay = 1;
+					direction = 0;
+					clearInterval(id);
+				} 
+					
+					if (curAngle <= 45 && closed == 0)
+					{
+						console.log('IN CLOSING');
+						//NGYAYIVALA LANA
+						closed = 1;
+						//NGYAYIVALA LANA
+						console.log('AT END')
+						return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+					} 
+				}, 10);
+	}
+}
+
+//'/API/closeDoor'
+router.get('/API/openDoor', function(req, res) {
+	console.log('Hello DOOR OPEN');
+	if (!req.session.doorAngle)
+	{
+		req.session.doorAngle = 0;
+	}
+
+	if (req.session.doorAngle == 0 || req.session.doorAngle == 45)
+	{	console.log('Test If i go in');
+		openDoor(req, res);
+	} else {
+		console.log('Hello DOOR OPEN ');
+		return res.status(200).send('Door is open');
+	}
+});
+
+router.get('/API/closeDoor', function(req, res) {
+	console.log('Hello DOOR CLOSE');
+	if (req.session.doorAngle > 45 || w3 == 90)
+	{
+		console.log('Hello col UUU');
+		closeDoor(req, res);
+	} else {
+		return res.status(400).send('Door is closed');
+	}
+});
+
+router.get('/API/openAll', function(req, res) {
+	
+	if (!req.session.currAngle)
+	{
+		req.session.currAngle = 0;
+	}
+
+	if (!req.session.currAngle2)
+	{
+		req.session.currAngle2 = 0;
+	}
+	
+	if (!req.session.doorAngle)
+	{
+		req.session.doorAngle = 0;
+	}
+	
+	if (req.session.currAngle == 0 || req.session.currAngle <= 45)
+	{
+		openAll(req, res);
+	} else {
+		return res.status(200).send('');
+	}
+	
+});
+
+router.get('/API/closeAll', function(req, res) {
+
+	let val = 0;
+
+	console.log(req.session.doorAngle + ' * ' + req.session.curAngle +  ' * ' + req.session.curAngle2);
+
+	closeAll(req, res);
+	//closeWindowAll(req, res);
+});
+
+/*********************************FUNCTIONS  *************************************************/
+
+function openDoorAll(req, res)
+{
+	
+	let curAngle = 45;
+	let direction = 1;
+	let sent1 = 0;
+	let delay = 10;
+	
+	if (req.session.doorAngle == 135)
+	{ 
+		curAngle = 135;
+		doorAngle = curAngle;
+		return;
+	} else if (req.session.doorAngle <= 45)
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-18", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+			//req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 135 && curAngle < 180) {
+				req.session.doorAngle = 135;
+				doorAngle = req.session.doorAngle;
+				console.log(' MY SESSION ' + req.session.doorAngle);
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngle <= 45) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngle == 135 && sent1 == 0)
+			{	//let window1Angle = checkW1Angle();
+				sent1 = 1;
+				return;
+			}
+			
+			}, 10);
+	}
+}
+
+function closeAll(req, res)
+{
+	
+		let direction = 1; 
+		let curAnglew = req.session.doorAngle;
+		let curAnglew2 = req.session.currAngle2;
+		let curAnglew3 = req.session.currAngle2;
+		let closed1 = 0;
+		let closed2 = 0;
+		let closed3 = 0;
+		let delay = 10;
+		//curAnglew
+		
+		if (req.session.currAngle > 45 || w1 > 0)
+		{
+				
+			let id = setInterval(() => {
+					
+					piblaster2.setServoPwm("P1-12", angleToPercent(curAnglew) + "%");
+					
+					if (curAnglew > 45)
+					{
+						curAnglew -= direction;
+					}
+				
+					// Change direction when it exceeds the max angle.
+					if (curAnglew <= 45) {
+						req.session.currAngle = 45;
+						windowAngle1 = 0;
+						delay = 1;
+						direction = 0;
+						clearInterval(id);
+					} 
+						
+						if (curAnglew <= 45 && closed1 == 0)
+						{
+							console.log('IN CLOSING');
+							//NGYAYIVALA LANA
+							closed1 = 1;
+							//NGYAYIVALA LANA
+							console.log('AT END')
+							//return;
+						} 
+					}, 10);
+		} 
+		
+		
+		if (req.session.currAngle2 > 45 || w2 > 0)
+		{
+				
+			let id = setInterval(() => {
+					
+					piblaster2.setServoPwm("P1-12", angleToPercent(curAnglew2) + "%");
+					
+					if (curAnglew2 > 45)
+					{
+						curAnglew2 -= direction;
+					}
+				
+					// Change direction when it exceeds the max angle.
+					if (curAnglew2 <= 45) {
+						req.session.currAngle2 = 45;
+						windowAngle2 = 0;
+						delay = 1;
+						direction = 0;
+						clearInterval(id);
+						w3 = 2;
+					} 
+						
+						if (curAnglew2 <= 45 && closed2 == 0)
+						{
+							console.log('IN CLOSING');
+							//NGYAYIVALA LANA
+							closed2 = 1;
+							//NGYAYIVALA LANA
+							console.log('AT END')
+							//return;
+						} 
+					}, 10);
+		} 
+		
+		if (req.session.currAngle > 45 || w1 > 0)
+		{
+				
+			let id = setInterval(() => {
+					
+					piblaster2.setServoPwm("P1-18", angleToPercent(curAnglew3) + "%");
+					
+					if (curAnglew3 > 45)
+					{
+						curAnglew3 -= direction;
+					}
+				
+					// Change direction when it exceeds the max angle.
+					if (curAnglew3 <= 45) {
+						req.session.currAngle = 45;
+						windowAngle1 = 0;
+						delay = 1;
+						direction = 0;
+						clearInterval(id);
+					} 
+						
+						if (curAnglew <= 45 && closed1 == 0)
+						{
+							console.log('IN CLOSING');
+							//NGYAYIVALA LANA
+							closed1 = 1;
+							//NGYAYIVALA LANA
+							console.log('AT END')
+							//return;
+						} 
+					}, 10);
+		} 
+		
+		if (closed1 == 1 || closed2 == 1)
+		{
+			return res.status(200).send('');
+		} else {return res.status(200).send('')}	
+}
+
+function closeWindowAll(req, res)
+{
+
+   
+}
+
+function openAll(req, res)
+{
+	let curAngleW1 = 45;
+	let curAngleW2 = 45;
+		let direction = 1;
+		let sent1 = 0;
+		let closed = 0;
+		let delay = 10;
+		let doorAngle = 45;
+
+	if (req.session.currAngle <= 90)
+	{
+
+		let refreshId = setInterval(() => {
+			curAngleW1 += direction;
+			//req.session.currAngle = curAngleW1;
+
+			if (curAngleW1 >= 90)
+			{
+				
+				req.session.currAngle = curAngleW1;
+				w1 = 45;
+				console.log(req.session.currAngle + ' AS 1');
+				clearInterval(refreshId);
+			}
+
+			piblaster.setServoPwm("P1-12", angleToPercent(curAngleW1) + "%");
+		}, 10);
+	} 
+
+	if (req.session.currAngle2 <= 90)
+	{
+	
+		let refreshId = setInterval(() => {
+			curAngleW2 += direction;
+			//req.session.currAngle2 = curAngleW2;
+
+			if (curAngleW2 >= 90)
+			{
+				req.session.currAngle2 = curAngleW2;
+				w2 = 45;
+				console.log(req.session.currAngle2 + ' AS 2');
+				clearInterval(refreshId);
+			}
+
+			piblaster.setServoPwm("P1-16", angleToPercent(curAngleW2) + "%");
+		}, 10);
+	}
+	
+	if (req.session.doorAngle <= 135)
+	{
+
+		let refreshId = setInterval(() => {
+			doorAngle += direction;
+			//req.session.currAngle = curAngleW1;
+
+			if (doorAngle >= 135)
+			{
+				
+				req.session.doorAngle = doorAngle;
+				w3 = 90;
+				console.log(req.session.doorAngle + ' AS 1');
+				clearInterval(refreshId);
+			}
+
+			piblaster.setServoPwm("P1-18", angleToPercent(doorAngle) + "%");
+		}, 10);
+	}
+
+	if (req.session.currAngle2 > 45 || req.session.currAngle > 45 || req.session.doorAngle > 45)
+	{
+		return res.status(200).send('Halaju');
+	} else {
+		return res.status(200).send('Halaju');
+	}
+}
+
+function window1(req, res)
+{
+	let curAngleW1 = 45;
+	let direction = 1;
+	let sent1 = 0;
+	let closed = 0;
+	let delay = 10;
+	
+	if (req.session.currAngle == 90)
+	{ 
+		curAngleW1 = 90;
+		windowAngle1 = curAngleW1  - 45;
+		return;
+	} else if (req.session.currAngle <= 45)
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-12", angleToPercent(curAngleW1) + "%");
+		
+			curAngleW1 += direction;
+			req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngleW1 >= 90 && curAngleW1 < 135) {
+				req.session.currAngle = 90;
+				windowAngle1 = req.session.currAngle  - 45;
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngleW1 <= 45) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngleW1 == 90 && sent1 == 0)
+			{	
+				sent1 = 1;
+			}
+			
+			}, 10);
+	}
+	return;
+}
+
+
+function window2(req, res)
+{
+	let curAngleW2 = 45;
+	// let curAngleD1 = 45;
+
+	let direction = 1;
+	let sent2 = 0;
+	let closed = 0;
+	let delay = 10;
+
+	if (req.session.currAngle2 == 90)
+	{ 
+		curAngleW2 = 90; 
+		windowAngle2 = curAngleW2  - 45;
+	} else if (req.session.currAngle2 <= 45)
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT ' + windowAngle2);
+			piblaster.setServoPwm("P1-16", angleToPercent(curAngleW2) + "%");
+		
+			curAngleW2 += direction;
+			//req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngleW2 >= 90 && curAngleW2 < 135) {
+				req.session.currAngle2 = 90;
+				windowAngle2 = req.session.currAngle2  - 45;
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngleW2 <= 45) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngleW2 == 90 && sent2 == 0)
+			{	console.log('AT ' + windowAngle2);
+				sent2 = 1;
+				//return res.status(200).send('Halaju');
+			}
+			
+			}, 10);
+	}
+	return;
+}
+
+function openAT90_2All(req, res)
+{
+	let curAngle = 45;
+	let direction = 1;
+	let sent1 = 0;
+	let delay = 10;
+	
+	if (req.session.currAngle2 == 90)
+	{ 
+		curAngle = 90;
+		windowAngle2 = curAngle  - 45;
+		return;
+	} else if (req.session.currAngle2 <= 45)
+	{
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-16", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+			//req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 90 && curAngle < 135) {
+				req.session.currAngle2 = 90;
+				windowAngle2 = req.session.currAngle2  - 45;
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngle <= 45) {
+				direction = 0;
+			}
+		
+			sent = 1;
+			if (curAngle == 90 && sent1 == 0)
+			{	
+				sent1 = 1;
+				return;
+			}
+			
+			}, 10);
+	}	
+}
+
+function openDoor(req, res)
+{
+	
+	let curAngle = 45;
+	let direction = 1;
+	let sent1 = 0;
+	let delay = 10;
+	
+	if (req.session.doorAngle == 135)
+	{ 
+		curAngle = 135;
+		doorAngle = curAngle;
+		console.log('Test 1');
+		return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+	} else if (req.session.doorAngle <= 45)
+	{
+		console.log('Test 2');
+		let refreshId = setInterval(() => {
+			//console.log('Session for angle 1 ' + req.session.currAngle1 + ' 2 ' + req.session.currAngle2 + '  ' + req.session.currAngle3);
+			console.log('AT START')
+			piblaster.setServoPwm("P1-18", angleToPercent(curAngle) + "%");
+		
+			curAngle += direction;
+			//req.session.closed = 0;
+
+			// Change direction when it exceeds the max angle.
+			if (curAngle >= 135 && curAngle < 180) {
+				req.session.doorAngle = 135;
+				doorAngle = req.session.doorAngle;
+				console.log(' MY SESSION ' + req.session.doorAngle);
+				direction = 0;
+				clearInterval(refreshId);	//Clear the interval
+			} else if (curAngle <= 45) {
+				direction = 0;
+			}
+		
+			//sent = 1;
+			if (curAngle == 135 && sent1 == 0)
+			{	
+					//let window1Angle = checkW1Angle();
+				sent1 = 1;
+				return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+			}
+			
+			}, 10);
+	}
+}
+
+function closeDoor(req, res)
+{
+	
+		let direction = 1; 
+		let curAngle = req.session.doorAngle;
+		let closed = 0;
+		let delay = 10;
+			
+		let id = setInterval(() => {
+				
+				piblaster.setServoPwm("P1-18", angleToPercent(curAngle) + "%");
+				
+				if (curAngle > 45)
+				{
+					curAngle -= direction;
+				}
+			
+				// Change direction when it exceeds the max angle.
+				if (curAngle <= 45) {
+					req.session.doorAngle = 45;
+					doorAngle = req.session.doorAngle;
+					delay = 1;
+					direction = 0;
+					clearInterval(id);
+				} 
+					
+					if (curAngle <= 45 && closed == 0)
+					{
+						console.log('IN CLOSING');
+						//NGYAYIVALA LANA
+						closed = 1;
+						//NGYAYIVALA LANA
+						console.log('AT END')
+						return res.status(200).send({angle: curAngle, angleMessage: '45 deg open'});
+					} 
+				}, 10);
+}
+
+//Test SENDING DATA WITH GLOBAL WEBSOCKETS SO THAT DETAILS OF MOTOR POSITIONS MAY BE EASILY KNOWS TO ALL WHO LOG IN TO SITE
+	global.io.on('connection', function(socket){
+   // console.log('a user connected');
+    //socket.on('disconnect', function(){
+    //  console.log('user disconnected');
+    //});
+    //Test messages by sending a message every 1 second.
+    var i = 0;
+    setInterval(function(){
+
+        let hardwareValues = checkHardware();
+		//let window1Angle = checkW1Angle();
+    	global.io.emit('hardwarev', {
+    		hardwareValues
+        });
+
+    	i++;
+    }, 1000);
+});
+//Test SENDING DATA WITH GLOBAL WEBSOCKETS SO THAT DETAILS OF MOTOR POSITIONS MAY BE EASILY KNOWS TO ALL WHO LOG IN TO SITE
+
+function checkHardware()
+{
+    let light1 = 0;
+    let light2 = 0;
+
+    if (LED1.readSync() === 1)
+    {
+        light1 = 1;
+    }
+
+    if (LED2.readSync() === 1)
+    {
+        light2 = 1;
+    } 
+    
+    let lightData = {
+        light1: light1,
+        light2: light2,
+        doorAngle: doorAngle,
+        windowAngle1: windowAngle1,
+        windowAngle2: windowAngle2
+    }
+    
+    //console.log(lightData.windowAngle2 + ' AS my stuffs *** ');
+    return lightData;
+}
+
+function angleToPercent(angle) {
+
+	return Math.floor((angle/180) * 100);  
+}
+
+module.exports = router;

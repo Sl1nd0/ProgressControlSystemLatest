@@ -1,0 +1,59 @@
+     <div class="container">
+          <div class="row">
+ <!-- Post Content Column -->
+ <div class="col-lg-3"> 
+            <br>
+              <div class="card  bg-info">
+             
+              <div class="card-body">
+                  <div class="card">
+                     
+                      <div class="card-body">
+                          <strong> Post Current Location </strong> <br>
+                          <hr>
+                        <form>
+                            <button type="button" ng-click = "postLocation('Cellc')" class="btn btn-primary">  CellC  </button>
+                            <button type="button"   ng-click = "postLocationLeave('Cellc')" class="btn btn-primary">Leave</button><br><br>
+                            
+                            <button type="button" ng-click = "postLocation('Vodacom')" class="btn btn-danger">Vodacom</button>
+                            <button type="button" ng-click = "postLocationLeave('Vodacom')" class="btn btn-danger">Leave</button><br><br>
+                            
+                            <button type="button" ng-click = "postLocation('Mtn')" class="btn btn-warning">MTN</button>
+                            <button type="button" ng-click = "postLocationLeave('Mtn')" class="btn btn-warning">Leave</button><br><br>
+                            
+                            <button type="button" ng-click = "postLocation('Office')" class="btn btn-dark">Office</button>
+                            <button type="button" ng-click = "postLocationLeave('Office')" class="btn btn-dark">Leave</button> <br>
+                            <hr>
+                            <b>Other </b><br>
+                            <input type="text" ng-model = "other" class="form-control" name="other" value=""><br>
+                            <button type="button" ng-click = "postLocationLeave(other)" class="btn btn-success">Submit</button>
+                            
+                        </form>
+                      </div>
+                  </div>
+
+              </div>
+			  
+
+            </div>
+			</div>
+			
+	 <div class="col-lg-6"> <!-- START -->
+        <br>
+        <div  ng-repeat= "loc in locations">
+        <div class="card" id = "chat">
+            <div class="card-body">
+            <b> {{loc.username}} {{loc.usersurname}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{loc.locationdate}} </b><br>
+                {{loc.locmessage}}
+        </div>
+        </div><br>
+    </div>
+		
+    </div> 
+     <!-- END -->
+         
+
+    </div><br><br><br><br><br><br>
+
+    </div>
+	

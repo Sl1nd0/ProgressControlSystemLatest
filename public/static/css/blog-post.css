@@ -1,0 +1,98 @@
+/*!
+ * Start Bootstrap - Blog Post (https://startbootstrap.com/template-overviews/blog-post)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-post/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 30px) {
+  body {
+    padding-top: 56px;
+  }
+  #d {
+	color: White;
+  }
+  
+   #userin {
+	color:white;
+  }
+  #userout {
+	color:white;
+  }
+
+.inline-div {
+    display:inline-block;
+}
+.inline-txtarea {
+    resize: none;
+    /*border : 2px solid red;
+    height:125px; */
+}
+
+.thirdrow {
+ 
+    border-radius: 10px;
+}
+.input-field-div{
+   display:inline-block; 
+}
+
+ /* #main {
+	   display: block;
+	   position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  }*/
+ 
+ /*
+ #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  } */
+  
+  #tv {
+	padding-top: 56px;
+  }
+
+ #chat{
+	background-color: #FAF8CC;
+ }
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  }
+  
+  .dropdown-menu a {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+  }
+  
+	.dropdown-menu {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	z-index: 1;
+	}
+ 
+	.dropdown-menu a:hover{
+	background-color: #ddd;
+	}
+	.dropdown-menu li:hover{
+	background-color: #ddd;
+	}
+  
+	.linkm {
+	color: black;
+	}
+   
+}

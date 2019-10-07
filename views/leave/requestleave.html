@@ -1,0 +1,66 @@
+     <div class="container" >
+          <div class="row">
+
+                <div class="col-lg-10">
+                <div class = "card" id = "chat">
+                  <div class = "card-body" >
+                    <div class="container">
+                   
+                                     <div class="row">
+                               
+                                       <!-- Post Content Column -->
+                          <div class="col-lg-8">  
+                                         
+                         <h2 class="mt-4">Request For {{leaveType}} Leave</h2>
+                   
+                         <hr>
+                         <form name="myForm">
+                         <b> {{numberS}} sick leave days left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{numberA}} annual leave days left </b><br><br> 
+                           Name
+                           <input type="text" class="form-control" ng-model = "name" name="firstname"><br>
+                           Last Name
+                           <input type="text" class="form-control" ng-model = "lastname" name="lastname"><br>
+			    Employee Email <br>
+                           <input type="email" ng-model = "email" class="form-control" name="email"><br>
+                           <!--Employee ID
+                           <input type="text" class="form-control" name="lastname" pattern="[0-9]{1}><br> -->
+                          
+			  <label for="number"> Phone Number </label>
+			<div class = "container">
+			   <input type="tel" name = "numberpart1" id="numb1" ng-model = "countrycode" style="font-size: 18pt; height: 35px; width:50px;" placeholder="+27"> 
+                   	   - <input type="tel" name = "number" id="num1"   class="form-control" ng-model = "telnumber" style="font-size: 18pt; height: 35px; width:170px;"
+                    	 pattern="[0-9]{9}" required> 
+                  	</div>
+                          
+                           Manager <br>
+                           <input type="text" name = "managername" class="form-control"  ng-model = "managername" ><br>
+			   Manager Email <br>
+                           <input type="email" class="form-control" ng-model = "manageremail" name="manageremail"><br>
+                           <hr>
+                           <h2 class="mt-4"> Details of Leave </h2>
+                           <hr>
+                           Leave Start 
+                           <input type="Date" class="form-control" ng-model = "datestart" name="startdate" value="Mouse"><br><br>
+                           Leave End 
+                           <input type="Date" class="form-control" ng-model = "dateend" name="enddate" value="Mouse"><br>
+                          Leave Type
+                          <select class="form-control" ng-model = "leavetype">
+                            <option value="Sick">Sick</option>
+                            <option value="Annual">Annual</option>
+                            <option value="">  </option>
+                          </select><br>
+                          
+                           Message <br>
+                           <textarea class="form-control md-textarea" ng-model = "leavemessage" name="message" rows="10" length="10" id = "area"> </textarea>
+                           <br> <button type="button" class="btn btn-primary" ng-click = "applyLeave()">Submit</button> <button type="button" class="btn btn-primary"  ng-click = "goBack()">Cancel</button><br><br>
+                          
+                          </form> 
+                        </div></div>
+                               </div>
+                             </div>
+                                     <!-- /.row -->
+                             </div>
+                       </div>
+		</div><br><br><br><br><br><br>
+    </div>

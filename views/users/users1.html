@@ -1,0 +1,23 @@
+  <div class="container">
+          <div class="row">
+
+ <div class="card-columns" > <!-- start -->
+               
+                <div class="card bg-warning" style="width:300px" ng-repeat="employee in Employees">
+                  
+                    <img class="card-img-top" src="images/images.jpg" alt="card" style="width:100%">
+                    <div class="card-body"> 
+                      <h4 class="card-title"> {{employee.eName}} </h4>
+                      <!-- Start Body -->
+                      <h6 class="card-title"> {{employee.eMail}} </h6>
+                      <h6 class="card-title"> {{employee.eNumber}} </h6>
+                      <p class="card-text"><b>Current Location:</b>  {{employee.eLocation}} <b>Position:</b>  {{employee.ePosition}} </p>
+                      <button type="button" ng-click= "sendEmail(employee)" class="btn btn-primary">Send Email</button>
+                      <button type="button" id = "testa" value = "wooo" ng-click= "sendSms(employee)" class="btn btn-primary">Send sms</button>
+                      <!-- End Body -->
+                    </div>
+                  </div><!-- END col --><br><br>
+
+ </div> <!-- End -->
+      </div><br><br><br><br><br><br>
+    </div>
