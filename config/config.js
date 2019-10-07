@@ -9,6 +9,16 @@ const pool = new pg.Pool({
   port:'5432'
 });
 
+
+
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+ });
+
+
+
+
 pool.connect(function(err, res) {
     if (err) {
         throw err;
