@@ -39,7 +39,7 @@
     "twilio": "^3.33.2",
     "view": "^1.1.1",
     "ws": "^7.1.2"
-  }
+  },
    "scripts": {
     "start": "node start.js"
   }
