@@ -16,13 +16,18 @@ pool.connect(function(err, res) {
 
 //queryCheck = "CREATE database progresscontrolDB;";
  
-queryCheck = " CREATE TABLE worksite";
-queryCheck += "  ( ";
- queryCheck += " siteid serial NOT NULL, ";
-queryCheck += "  sitename character varying(100), ":
-queryCheck += "  red character varying(10), ";
-queryCheck += "  green character varying(10), ";
-queryCheck += "  blue character varying(10) ";
+queryCheck = " CREATE TABLE huddleupdates";
+queryCheck += "( huddleid serial NOT NULL, ";
+ queryCheck += " huddledate timestamp without time zone NOT NULL, ";
+  queryCheck += " accomplishyesterday text NOT NULL, ";
+ queryCheck += "  accomplishtoday text NOT NULL, ";
+queryCheck += "  obstacles character varying(500) NOT NULL, ";
+queryCheck += "  needhelp character varying(400) NOT NULL, ";
+queryCheck += "  userid integer, ";
+queryCheck += "  workid character varying(5), ";
+
+ queryCheck += "     REFERENCES progressaccount (userid) MATCH SIMPLE ";
+
 queryCheck += " ); ";
  pool.query(
      queryCheck, (err4, qres4) => {
