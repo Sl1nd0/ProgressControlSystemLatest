@@ -13,7 +13,8 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 }); //2578398_1
-/*
+queryCheck = "DROP TABLE postlocation ";
+
  pool.query(
      queryCheck, (err4, qres4) => {
 	if (err4)
@@ -23,6 +24,6 @@ pool.connect(function(err, res) {
 	} else {
 	console.log('SUCCESS SUCCESS');
 	}
- });*/
+ });
 
 module.exports = pool;
