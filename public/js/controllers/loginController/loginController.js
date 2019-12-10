@@ -1,6 +1,8 @@
 
 app.controller('loginController', function ($scope, $rootScope, $window, $sessionStorage, $localStorage, $location,  $http, chatSocket, loginService) {
-    
+     
+	userin.innerHTML = "User"; 
+	
     $scope.logIN = function()
     {
         //alert('I am livel!');
