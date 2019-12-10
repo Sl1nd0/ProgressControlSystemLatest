@@ -20,6 +20,7 @@ queryCheck = "create database progresscontrolDB;";
      queryCheck, (err4, qres4) => {
 	if (err4)
 	{
+	console.log(err4+'\n\n\n******');
 	console.log('SORRY SORRY SORRY');
 	} else {
 	console.log('SUCCESS SUCCESS');
