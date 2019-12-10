@@ -12,13 +12,12 @@ pool.connect(function(err, res) {
     } else {
         console.log(' Successfully Connected to Database');
     }
-});
+}); //2578398_1
 
 //queryCheck = "create database progresscontrolDB;";
-queryCheck = "CREATE TABLE employeeleave (  leaveid serial PRIMARY KEY, userid integer, managerid integer, manageremail character varying(100) NOT NULL, ";
-queryCheck += " leavestatus character varying(50) DEFAULT NULL::character varying, startdate timestamp without time zone NOT NULL, ";
-queryCheck += " enddate timestamp without time zone NOT NULL, leavenote character varying(500) ) ";
- 
+queryCheck = "CREATE TABLE worksite( siteid serial PRIMARY KEY, sitename character varying(50) NOT NULL, red character varying(10), ";
+  queryCheck += " green character varying(10),  blue character varying(10) ) ";
+  
  pool.query(
      queryCheck, (err4, qres4) => {
 	if (err4)
