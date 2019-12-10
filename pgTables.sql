@@ -51,8 +51,12 @@ CREATE TABLE postlocation
   sitename character varying(50) NOT NULL,
   locationmessage character varying(500) NOT NULL,
   locationstatus integer NOT NULL,
+  locationdate timestamp not null,
   userid integer REFERENCES progressAccount (userid)
 )
+
+SELECT sitename, locationstatus, userid, locationdate FROM postlocation  WHERE userid = 1 ORDER BY locationdate DESC  limit(1)
+
 
 =================
 
