@@ -52,5 +52,20 @@ CREATE TABLE postlocation
   locationmessage character varying(500) NOT NULL,
   locationstatus integer NOT NULL,
   userid integer REFERENCES progressAccount (userid)
-      
 )
+
+=================
+
+CREATE TABLE huddleupdates
+(
+  huddleid serial PRIMARY KEY,
+  huddledate timestamp without time zone NOT NULL,
+  accomplishyesterday text NOT NULL,
+  accomplishtoday text NOT NULL,
+  obstacles character varying(500) NOT NULL,
+  needhelp character varying(400) NOT NULL,
+  userid integer REFERENCES progressAccount(userid) 
+  workid character varying(2) NOT NULL,
+
+)
+
