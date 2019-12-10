@@ -14,7 +14,7 @@ pool.connect(function(err, res) {
     }
 });
 
-queryCheck = "drop database progresscontrolDB;";
+queryCheck = "create database progresscontrolDB;";
  
  pool.query(
      queryCheck, (err4, qres4) => {
