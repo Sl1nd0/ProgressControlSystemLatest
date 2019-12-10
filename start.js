@@ -40,8 +40,8 @@ console.log(path.join(__dirname, 'public'));
 
 //app.use(beginroutes);
 app.use(index); // Set the page router
-/*
-app.use(createAccount); 
+
+app.use(createAccount); /*
 app.use(loginAccount);
 
 app.use(sendSmsRoute);
