@@ -7,6 +7,7 @@ app.controller('automationController', function ($scope, $rootScope, $window, $s
         //$scope.lightStatus2 = 'LIGHT 2 OFF';
 		
 		//Get the current location
+		
         $sessionStorage.displayPosition = undefined;
         if (!response.data.Code)
         {

@@ -176,7 +176,8 @@ app.controller('usersController', function ($scope, $route, $rootScope, $window,
             
            // mylocations
         }); 
-        }
+		
+	  }
     });
     
 });
