@@ -2,6 +2,8 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 
+var pool = require('../config/connect2');
+
 var app = express();
 var port = process.env.PORT || 4000; 
 var http = require('http').Server(app);
