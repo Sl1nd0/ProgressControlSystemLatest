@@ -13,11 +13,8 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 }); //2578398_1
-/*
-//queryCheck = "create database progresscontrolDB;";
-queryCheck = "CREATE TABLE huddleupdates(  huddleid serial PRIMARY KEY, huddledate timestamp without time zone NOT NULL, ";
- queryCheck += " accomplishyesterday text NOT NULL, accomplishtoday text NOT NULL, obstacles character varying(500) NOT NULL, needhelp character varying(400) NOT NULL, ";
-  queryCheck += "  userid integer REFERENCES progressAccount(userid), workid character varying(2) NOT NULL );";
+queryCheck = "CREATE TABLE postlocation ( locationid  serial PRIMARY KEY, sitename character varying(50) NOT NULL, locationmessage character varying(500) NOT NULL, ";
+ queryCheck += " locationstatus integer NOT NULL, userid integer REFERENCES progressAccount (userid)) ";
 
  pool.query(
      queryCheck, (err4, qres4) => {
@@ -29,5 +26,5 @@ queryCheck = "CREATE TABLE huddleupdates(  huddleid serial PRIMARY KEY, huddleda
 	console.log('SUCCESS SUCCESS');
 	}
  });
-*/
+
 module.exports = pool;

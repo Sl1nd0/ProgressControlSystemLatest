@@ -69,3 +69,13 @@ CREATE TABLE huddleupdates
 
 )
 
+
+
+DELETE FROM employeeleave;
+DELETE FROM postlocation;
+SELECT * FROM postlocation;
+DELETE FROM huddleupdates;
+
+
+
+DELETE FROM worksite;
