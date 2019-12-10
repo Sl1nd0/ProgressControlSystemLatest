@@ -42,3 +42,15 @@ CREATE TABLE worksite
 )
 
 
+================
+
+
+CREATE TABLE postlocation
+(
+  locationid  serial PRIMARY KEY,
+  sitename character varying(50) NOT NULL,
+  locationmessage character varying(500) NOT NULL,
+  locationstatus integer NOT NULL,
+  userid integer REFERENCES progressAccount (userid)
+      
+)
