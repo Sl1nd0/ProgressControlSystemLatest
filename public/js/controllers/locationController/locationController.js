@@ -123,7 +123,7 @@ app.controller('locationController', function ($scope, $rootScope, $window, $ses
                         let username =  Data.rows[i].username;
                         let usersurname =  Data.rows[i].usersurname;
                         let site = Data.rows[i].sitename;
-                        let locmessage = Data.rows[i].locationmessage;
+                        let locmessage = Data.rows[i].locationmessage.replace("<q1>", "'");
                         let locationdate = Data.rows[i].locationdate;
                         //locationdate.setHours(locationdate.getHours + 2);
                        // alert(username );
@@ -194,10 +194,10 @@ app.controller('locationController', function ($scope, $rootScope, $window, $ses
                 $scope.postLocationOther = function(value)
                 {
                     let data = {
-                        message: $scope.escapeForJson(value),
+                        message: $scope.escapeForJson(value).replace("'", "<q1>"),
                         userid: myData.rows[0].userid
                     }
-
+					alert(data.message + '   As Test ');
                     locationServices.postOther(encodeURI(JSON.stringify(data)))
                     .then(function(response) {
                         if (response.status != 200)
@@ -213,7 +213,8 @@ app.controller('locationController', function ($scope, $rootScope, $window, $ses
 
                 $scope.escapeForJson = function(value) {
                     var mval = value;
-    
+					
+					
                       mval.replace(/\b/g, "")
                       mval.replace(/\f/g, "")
                       mval.replace(/\\/g, "\\")
@@ -224,12 +225,12 @@ app.controller('locationController', function ($scope, $rootScope, $window, $ses
                       mval.replace(/\u2028/g, "\\u2028")
                       mval.replace(/\u2029/g, "\\u2029");
                       mval.replace('"', '\"');
-                      mval.replace('"', '\"');
+					  //mval.replace("'", "''");
+					 // mval.replace(/\'/g, "\\\'");
                       return mval;
                   }
 
                   $scope.getAllLocationData();
-
         }
     });
 });

@@ -71,21 +71,26 @@ app.controller('createController', function ($scope, $rootScope, $window, $sessi
 			//alert(workid)
 			if (workid == '1' || workid == '2' || workid == '3')
 			{
-				alert('Please be patient while PCS is validating your details');
-				createAccountService.createAccount(JSON.stringify(Data))
-				.then(function(response) {
+				if ($scope.password2 == $scope.password)
+				{
+					alert('Please be patient while PCS is validating your details');
+					createAccountService.createAccount(JSON.stringify(Data))
+					.then(function(response) {
 
-					if (response.status != 200)
-					{     
-						alert(response.data);
-						//$scope.Back();
-					} else {
-						alert('Account created successfully');
-					   // alert(response.data.randv);
-						$location.path('/confirm');
-						//$scope.Back();
-					}
-				});
+						if (response.status != 200)
+						{     
+							alert(response.data);
+							//$scope.Back();
+						} else {
+							alert('Account created successfully');
+						   // alert(response.data.randv);
+							$location.path('/confirm');
+							//$scope.Back();
+						}
+					});
+				} else {
+					alert("Can't create account: \n\nPassword and confirmation password do not match");
+				}
 				
 			} else {
 				alert('The administrator only catered for 3 types of positions for now\n\n WHICH ARE:\n1. Software Developer 2. Support Engineer 3.Consultant');

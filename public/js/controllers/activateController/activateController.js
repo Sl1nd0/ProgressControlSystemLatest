@@ -23,7 +23,7 @@ app.controller('activateController', function ($scope, $rootScope, $window, $ses
 
         $scope.resendVerification = function()
         {   
-            //alert('My TEST! --> * ' + newData.email);
+            alert('Please be patient while PCS is resending verification code ');
 			//alert('Im re-sending');
             createAccountService.resendVerification(JSON.stringify(newData))
             .then(function(response) {

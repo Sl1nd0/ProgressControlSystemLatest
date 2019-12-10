@@ -57,7 +57,7 @@ router.get('/API/postLocation:ToDo', function(req, res) {
                             {
                                 return res.status(400).send('Something went wrong trying to post status');
                             } else {
-                                return res.status(200).send('Succesfully done');
+                                return res.status(200).send("At " + myData.sitename);
                             }
                         });
 
@@ -151,6 +151,7 @@ router.get('/API/postDifferent:ToDo', function(req, res) {
             locationPost, (err7, qres7) => {
             if (err7)
             {
+				console.log(locationPost + '\n\n\n');
                 return res.status(400).send("Couldn't insert other reason into location table");
             } else {
                 return res.status(200).send("Message sent through");

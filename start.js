@@ -2,14 +2,14 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 
-var pool = require('./config/connect2');
+//var pool = require('./config/connect2');
 
 var app = express();
 var port = process.env.PORT || 4000; 
 var http = require('http').Server(app);
 global.io = require('socket.io')(http);
 var index = require('./routes/index.js'); 
-var createAccount = require('./routes/createAccount.js'); /*
+var createAccount = require('./routes/createAccount.js'); 
 var loginAccount = require('./routes/loginRoute.js');
 var sendMailRoute =  require('./routes/sendEmailRoute.js');
 var sendSmsRoute =  require('./routes/sendSmsRoute.js');
@@ -20,7 +20,7 @@ var leaveTable = require('./routes/leaveTableRoute.js');
 var locationRoute = require('./routes/locationRoute.js');
 var siteRoute = require('./routes/siteRouter.js');
 var automationRoute = require('./routes/automationRoute.js');
-var fileuploadRoute = require('./routes/afterUploadRoute.js'); */
+var fileuploadRoute = require('./routes/afterUploadRoute.js'); 
 var multer = require('multer');
 //Automation
 // var LED1 = new Gpio(4, 'out'); 
@@ -41,7 +41,7 @@ console.log(path.join(__dirname, 'public'));
 //app.use(beginroutes);
 app.use(index); // Set the page router
 
-app.use(createAccount); /*
+app.use(createAccount); 
 app.use(loginAccount);
 
 app.use(sendSmsRoute);
@@ -54,7 +54,7 @@ app.use(locationRoute);
 app.use(siteRoute);
 app.use(automationRoute);
 app.use(fileuploadRoute);
-*/
+
 //app.set('port', 4000);
 //connection was here
 
