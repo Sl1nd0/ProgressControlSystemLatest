@@ -13,9 +13,7 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 }); //2578398_1
-queryCheck = "CREATE TABLE postlocation ( locationid  serial PRIMARY KEY, sitename character varying(50) NOT NULL, locationmessage character varying(500) NOT NULL, ";
- queryCheck += " locationstatus integer NOT NULL, userid integer REFERENCES progressAccount (userid)) ";
-
+/*
  pool.query(
      queryCheck, (err4, qres4) => {
 	if (err4)
@@ -25,6 +23,6 @@ queryCheck = "CREATE TABLE postlocation ( locationid  serial PRIMARY KEY, sitena
 	} else {
 	console.log('SUCCESS SUCCESS');
 	}
- });
+ });*/
 
 module.exports = pool;
