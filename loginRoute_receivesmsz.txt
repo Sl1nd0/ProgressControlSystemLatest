@@ -2,7 +2,7 @@ var q = require('q');
 var express = require('express');
 var bodyParser = require('body-parser');
 var router = express.Router();
-var pool = require('../config/connect2');
+var pool = require('../config/connect');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var twilio = require('twilio');
@@ -10,7 +10,7 @@ var client =new twilio('AC38c360080cfddb271554c355c83f542d', 'b6ee2e5869d7ac3268
 var accStatus = 0;
 var nodemailer = require('nodemailer');
 var session = require('express-session');
-//var Gpio = require('onoff').Gpio;
+var Gpio = require('onoff').Gpio;
 var mdata = '';
 var everything = '';
 var locationZ = [];
@@ -168,9 +168,78 @@ router.get('/API/GetAll', function(req, res) {
 
 function redeemData()
 {
-	  let queryAll = "SELECT * FROM progressAccount ";
-
-       // console.log(queryAll);
+	request(
+	  {
+		 method: 'GET',
+		  uri : url,
+		  headers : {
+			  "Authorization" : auth
+		  }
+		  //method:'POST',
+		 // formData: formData1
+	  },
+	  function (error, response, body) {
+		  // Do more stuff with 'body' here
+		 /// console.log(response.body + "\n **8");
+		  var mb = JSON.parse(body);
+		  mb[0]['type'] = 'Dealt';
+		  body = JSON.stringify(mb);
+		  console.log(mb[1]['type']);
+		  console.log('***** \n '+ JSON.stringify(body) + '\n\n');
+		  
+		  let queryAll = "SELECT * FROM progressAccount ";
+		let querySms = "SELECT fromnumber, body, (dateentered + interval '2' HOUR) as dateentered FROM smstest order by dateentered DESC limit(1)";
+		
+		let values = [];
+		let valdate = [];
+		for (var i = 0; i < mb.length; i++)
+		{
+			values[i] = mb[i]['body'];
+			valdate[i] = mb[i]['submission']['date'];
+		}
+		
+		let checkdate = new Date(valdate[1]);
+		console.log(checkdate.toDateString() + '\n\n');
+		pool.query(
+            querySms, (err41, qres41) => {
+				console.log(qres41.rows[0].body + '   ' + checkdate.toDateString() + '    ' + qres41.rows[0].dateentered.toDateString() + '\n\n');
+				if (values[0] == qres41.rows[0].body && qres41.rows[0].dateentered.toDateString() == checkdate.toDateString())
+				{
+					console.log(qres41.rows[0].body + '\n\n');
+					console.log('Haz been done');
+					  console.log(queryAll);
+					  
+        pool.query(
+            queryAll, (err4, qres4) => {
+                if (err4)
+                {
+                    console.log(err4);
+                } else {
+					let locations = [];
+					everything = qres4;
+					let i = 0;
+					while (i < qres4.rowCount)
+					{
+						console.log(i + '  AS my index  ' + qres4.rows[i].userid);
+						//locations[i] = getLocation(qres4.rows[i].userid);
+						getLocation(qres4.rows[i].userid, i, function(err, data, index) {
+							console.log(data);
+							returnM(index, err, data);
+						});
+						i++;
+					}
+ 
+                }
+				});
+				
+				} else {
+					console.log('Done now!\n\n');
+					  console.log(queryAll);
+					let queryInsert = "INSERT INTO smstest(fromnumber, body, mytype, dateentered) VALUES ('";
+						queryInsert += mb[0]['from'] + "', '" + mb[0]['body'] + "', '" +  'Dealt' + "', '" + mb[0]['submission']['date'] + "')";
+						console.log(queryInsert);
+					  pool.query(
+            queryInsert, (err42, qres42) => {
         pool.query(
             queryAll, (err4, qres4) => {
                 if (err4)
@@ -193,6 +262,11 @@ function redeemData()
  
                 }
         });
+		 });
+				}
+		 });
+	  }
+	);
 	
 }
 

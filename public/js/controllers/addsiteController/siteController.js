@@ -31,14 +31,15 @@ app.controller('siteController', function ($scope, $rootScope, $window, $session
 
                     if (myData.rows[0].useremail.toUpperCase().trim() == 'SSANKABI@GMAIL.COM')
                     {
-                    siteServices.addSite(encoded)
-                    .then(function(response) {
-                    //After response man!
-                        alert(response.data);
+						siteServices.addSite(encoded)
+						.then(function(response) {
+						//After response man!
+							alert(response.data);
+							$location.path('/location');
 
-                    });
+						});
                     } else {
-                      alert('You do not have privileges of adding site, please speak to the owner');
+                      alert('You do not have privileges of adding site, please speak to the pcs owner');
                     }
                 }
 

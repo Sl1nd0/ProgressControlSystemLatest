@@ -24,7 +24,7 @@ let transporter = nodemailer.createTransport({
 	port: 25,
 	auth: {
 	user: 'ssankabi@gmail.com',
-	pass: '@Sli23547'
+	pass: '@Sl123547'
 	},
 	tls: {
 	rejectUnauthorized: false
@@ -44,7 +44,7 @@ router.post('/API/SendEmail:ToDo', function(req, res) {
 
         console.log( myData.eMail + 'As EMAIL ');
         //console.log(myData.eAttachment.value + " \n as email attachements");
-       /* let mailOptions = {
+        let mailOptions = {
             from: 'ssankabi@gmail.com',
             to: myData.eMail,
             subject: myData.eSubject,
@@ -66,7 +66,7 @@ router.post('/API/SendEmail:ToDo', function(req, res) {
             return res.status(200).send('Email successfully sent');
             }
         });
-    */
+    
     } else {
         return res.status(400).send('Error, Could not send Email, no email address');
     }

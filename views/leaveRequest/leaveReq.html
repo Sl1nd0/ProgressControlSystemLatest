@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
 
-      <div class="col-md-4"></div>
+      <div class="col-md-16"></div>
     
-      <div class="col-md-4">
+      <div class="col-md-16">
   <h3></h3>
   <div class="card" id = "chat">
     <div class="card-body" align ="left">
@@ -11,8 +11,8 @@
         <strong> Approve leave for {{requesterName}} </strong><br><br>
         <form>
           <p> <b> LEAVE NOTE: </b> {{leaveNote}}</p> <br>
-          <button type="button"  ng-click = "leaveApprove()" class="btn btn-primary"> Approve </button>
-<button type="button" ng-click = "leaveReject()" class="btn btn-primary">Reject</button>
+          <button type="button"  id= "primary" ng-click = "leaveApprove()" class="btn btn-primary"> Approve </button>
+          <button type="button"  id= "primary" ng-click = "leaveReject()" class="btn btn-primary">Reject</button>
         </form>
 
     </div> 

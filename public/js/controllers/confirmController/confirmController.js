@@ -39,7 +39,7 @@ app.controller('confirmController', function ($scope, $rootScope, $window, $sess
                 password: Data.password
             }
             
-            alert('My TEST! --> * ' + newData.email);
+           // alert('My TEST! --> * ' + newData.email);
             createAccountService.resendVerification(JSON.stringify(Data))
             .then(function(response) {
                 
@@ -51,10 +51,10 @@ app.controller('confirmController', function ($scope, $rootScope, $window, $sess
             });     
         }
 
-        alert(verification2 + 'As  v 2 ');
+        //alert(verification2 + 'As  v 2 ');
         $scope.Confirm = function()
         { 
-            alert(verification + ' AZ my code !!');
+           // alert(verification + ' AZ my code !!');
             if ($scope.vcode.trim() == verification)
             {
                 $sessionStorage.verification = undefined;

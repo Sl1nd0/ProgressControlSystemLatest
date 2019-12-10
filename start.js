@@ -3,7 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var app = express();
-var port = process.env.PORT || 3000; 
+var port = process.env.PORT || 4000; 
 var http = require('http').Server(app);
 global.io = require('socket.io')(http);
 var index = require('./routes/index.js');

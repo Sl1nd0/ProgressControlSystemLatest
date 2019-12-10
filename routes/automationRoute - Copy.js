@@ -1155,7 +1155,7 @@ function closeDoor(req, res)
     }, 1000);
 });
 //Test SENDING DATA WITH GLOBAL WEBSOCKETS SO THAT DETAILS OF MOTOR POSITIONS MAY BE EASILY KNOWS TO ALL WHO LOG IN TO SITE
- 
+
 function sendData(Data)
 {	
 	

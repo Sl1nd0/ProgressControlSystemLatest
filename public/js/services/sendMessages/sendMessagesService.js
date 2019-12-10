@@ -51,4 +51,18 @@ app.service('sendMessagesService', function ($q, $http)
 			return response;
 		})
     } /* sendMessagesService.sendEmail */ 
+	
+	sendMessagesService.sendEmailNoAttach = function (jsonData)
+	{
+		//Special Function
+		return $http.get('/API/sendNoAttached' + jsonData)
+		.then(function (response)
+		{
+			return response;
+		},
+		function (response)
+		{
+			return response;
+		})
+    } /* sendMessagesService.sendEmail */ 
 });

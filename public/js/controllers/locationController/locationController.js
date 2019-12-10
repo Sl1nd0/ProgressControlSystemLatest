@@ -88,11 +88,8 @@ app.controller('locationController', function ($scope, $rootScope, $window, $ses
                     return { 'background-color': 'Red' };
                  }*/
                 chatSocket.on('alldata', function(data) {
-                    if (data.message != undefined)
-                    {
-                        //alert(data.message);
-                        $scope.setLocationData(data.alldata);
-                    }
+                //    /console.log(data)
+                   $scope.setLocationData(data.alldata);
                 });
 
                 $scope.getAllLocationData = function()

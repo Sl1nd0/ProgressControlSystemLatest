@@ -135,4 +135,30 @@ app.service('automationServices', function ($q, $http)
 		})
 	} /* automationServices.closeAll */
 	
+	automationServices.getCurrentlocation = function (data)
+	{
+		return $http.get('/API/getLocation' + data)
+		.then(function (response)
+		{
+			return response;
+		},
+		function (response)
+		{
+			return response;
+		})
+	} /* automationServices.closeAll */
+	
+	automationServices.activateSmsAutomation = function (data)
+	{
+		return $http.get('/API/activateSmsAutomation' + data)
+		.then(function (response)
+		{
+			return response;
+		},
+		function (response)
+		{
+			return response;
+		})
+	} /* automationServices.activateSmsAutomation */
+	
 });

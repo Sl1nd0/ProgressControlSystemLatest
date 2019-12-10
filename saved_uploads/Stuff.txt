@@ -1737,7 +1737,7 @@ https://www.youtube.com/watch?v=cEVvn8v8Uak
 
 10.211.126.29
 
-
+0841570077 -- my assist service ....
 
 
 db.getCollection('serials').find({'SKU' : '7177439', 'last_update_to_wms' : new Date('2018-08-01T00:00:00.000Z') })
@@ -2034,3 +2034,205 @@ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 ---node install and fix ---
+
+
+https://youtu.be/zoSyZTB7f_s
+
+{
+    "_id" : ObjectId("5a89d970bd9a58beae5252f1"),
+    "stationNumber" : 41,
+    "schuteNumber" : 0,
+    "dailyTotal" : 0,
+    "stationIP" : "10.211.126.59",
+    "labelPrinterQName" : "qlp2041",
+    "desktopPrinterQName" : "qdp2041",
+    "autobagPrinterQName" : null,
+    "active" : false,
+    "rdtIP" : null,
+    "totes" : [],
+    "__v" : 1,
+    "currentTote" : "0000051",
+    "updated_at" : ISODate("2018-06-15T08:54:01.549Z"),
+    "autobagPrinter" : false
+}
+
+
+
+10.200.214.23
+
+
+0000489
+https://youtu.be/c-vjbQlC06g
+
+db.getCollection('picklists').find({"orders.orderID" : "2443627_1"})
+2443627_1 --ALREADY PICKED ....
+
+
+https://twitgoo.com/best-free-movie-download-sites/
+
+https://mail.google.com/mail/u/0/#search/quincy/FMfcgxwDrlRLXDrTJXGRKSPrWWNrjnWN
+
+
+==
+
+{
+    "_id" : ObjectId("596db968cab2c4a5846cde26"),
+    "stationNumber" : 31,
+    "schuteNumber" : 15,
+    "dailyTotal" : 0,
+    "stationIP" : "10.1.45.9",
+    "labelPrinterQName" : "lp1016",
+    "desktopPrinterQName" : "dp1016",
+    "autobagPrinterQName" : "AB1002",
+    "rdtIP" : null,
+    "active" : false,
+    "totes" : [],
+    "__v" : 3026,
+    "updated_at" : ISODate("2019-10-09T05:55:56.897Z"),
+    "currentTote" : null,
+    "autobagPrinter" : false,
+    "CartonSizes" : null,
+    "CurrentOrder" : null,
+    "NumOrders" : null,
+    "OrderIndex" : null,
+    "ToteType" : null,
+    "pickList" : null,
+    "ProcessOnPutWalls" : null,
+    "ProcUsingDesktopAutoBag" : null,
+    "currentTransporter" : null
+}
+
+====================
+
+
+3rd Jan 2019
+12th Feb 2019
+
+--NEW CYCLE --
+3 March 2019
+27 SEP 2019
+(08-07-2019) 
+(25-07-2019)
+(26-07-2019)
+---- THAT SICK LEAVE DAY (I did not have a sick note)------ 
+
+
+https://github.com/Nexmo/nexmo-node-code-snippets/tree/master/messages
+> NEXMO receIVe sms<
+
+
+
+cupsenable qdp2018
+
+
+https://www.jobleads.co.za/search/featured/external-a8992a24ec753476c27b5c795e1ad453
+
+----===============
+Sl1nd0kuhle
+@Sli2354
+BULK SMS
+
+
+--New 1nz
+
+
+Sli00000000
+
+---New 1nz
+
+
+Silindokuhle AWS
+
+
+https://fossbytes.com/top-10-free-movie-download-websites-watch-legal/
+---======================
+
+19BEE5C1FE7C47DA8205CB377350BB5C-01-C  id
+Rcf28GUDC*mB4s0JYLI_ggtSmTP6M
+
+
+https://www6.yesmovies.fm/
+
+
+===
+
+
+C:\Users\Silindokuhle\Documents\ngrok-stable-windows-amd64
+
+
+
+
+
+====receive sms ===============================================
+
+https://www.nexmo.com/blog/2016/10/27/receive-sms-messages-node-js-express-dr
+
+
+========receive sms -==== ==============================
+
+
+https://globfone.com/thank-you/ -- MY TESTER
+
+
+
+
+/* LIFE SAVER
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Access a JSON object using bracket notation:</p>
+
+<p id="demo"></p>
+
+<script>
+var myObj, x;
+myObj = [{"name":"John", "age":30, "car":null}];
+x = myObj[0]['name'];
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+
+*/
+
+===============================  =============================
+
+
+
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  section {
+    background-color: olive;
+    color: white;
+	 background-image: url("../../../bond.jpg");
+	 background-size: 50%;
+      background-repeat: no-repeat;
+  }
+}
+
+l:  34,7   (1344px)    ;;;; 1px :  0.39cm    1cm === 39px                 (1600         698)
+h: 
+
+
+https://github.com/chinmaymk/angular-charts/blob/master/examples/main.controller.js
+
+
+bond1234
+
+//HEROKU DEPLOY
+https://youtu.be/6XByu0QS6TI
+//
+
+heroku ps:scale web=1
+
+
+
+//MY END POINT
+https://flows.messagebird.io/flows/newFlow
+
+$ curl -X POST -H 'Content-Type: application/json' -d '{ "recipient": "MessageBird", "message": "HALAJU", "originator": "SLI" }' https://flows.messagebird.io/flows/newFlow
+?200

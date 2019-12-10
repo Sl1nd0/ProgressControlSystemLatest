@@ -1,35 +1,72 @@
 <div class="container" class = "form-control">
+
   <div class="row">
 
+
+
       <div class="col-md-4"></div>
+
     
+
       <div class="col-md-4.5">
+
   <h3></h3>
+
   <div class="card" id = "chat">
+
     <div class="card-body" align ="left">
+
     <strong> Office Automation </strong>
+
           <hr> <br>
+
         <form>
 
+			<button type="button" ng-click= "activateSms()" class="btn btn-success"> Activate SMS Automation </button> &nbsp; &nbsp;  &nbsp; &nbsp; <strong> {{smsautomation}} </strong> <br> <br>
+
           <button type="button" ng-click= "openDoor()" class="btn btn-success"> Open Door </button> &nbsp; &nbsp; 
+
           <button type="button" ng-click= "closeDoor()" class="btn btn-success"> Close Door </button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <strong> {{doorStatus}} </strong> <br> <br>
+
           
+
           <button type="button" ng-click = "openWindow('1')" class="btn btn-success"> Open Window1 </button> &nbsp; <button type="button" ng-click = "closeWindow('1')" class="btn btn-success"> Close Window1 </button> &nbsp; &nbsp; <strong> {{windowStatus1}} </strong> <br> <br>
+
          <button type="button" ng-click = "openWindow('2')"  class="btn btn-success"> Open Window2 </button> &nbsp; <button type="button" ng-click = "closeWindow('2')" class="btn btn-success"> Close Window2 </button> &nbsp; &nbsp; <strong> {{windowStatus2}} </strong> <br> <br>
-          <button type="button" ng-click= "onLight1('1')" class="btn btn-success"> Turn On Light 1</button> &nbsp; <button type="button" ng-click= "offLight1('1')" class="btn btn-success">Turn Off Light 1</button> &nbsp; &nbsp; &nbsp;  <strong> {{lightStatus}} </strong>  <br> <br>
+
+	 <button type="button" ng-click= "onLight1('1')" class="btn btn-success"> Turn On Light 1</button> &nbsp; <button type="button" ng-click= "offLight1('1')" class="btn btn-success">Turn Off Light 1</button> &nbsp; &nbsp; &nbsp;  <strong> {{lightStatus}} </strong>  <br> <br>
+
           <button type="button" ng-click= "onLight2('2')" class="btn btn-success"> Turn On Light 2</button> &nbsp; <button type="button" ng-click= "offLight2('2')" class="btn btn-success">Turn Off Light 2</button> &nbsp; &nbsp; &nbsp;  <strong> {{lightStatus2}} </strong>  <br> <br>
+
           
+
           <button type="button" ng-click= "onLight3('3')" class="btn btn-success"> Turn On Light 3</button> &nbsp; <button type="button" ng-click= "offLight3('3')" class="btn btn-success">Turn Off Light 3</button> &nbsp; &nbsp; &nbsp;  <strong> {{lightStatus3}} </strong>  <br> <br>
+
           
+
           <button type="button" ng-click = "onAlarm()" class="btn btn-success"> Turn On Alarm</button> &nbsp; <button type="button"  ng-click = "offAlarm()" class="btn btn-success">Turn Off Alarm</button> &nbsp; &nbsp;<strong> {{alarmStatus}} </strong>  <br> <br>
+
           <button type="button" ng-click= "openAll()" class="btn btn-success"> Open All</button>  &nbsp; &nbsp; 
-          <button type="button" ng-click = "closeAll()" class="btn btn-success"> Close All </button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <strong> {{allStatus}} </strong> <br> <br>
+
+          <button type="button" ng-click = "closeAll()" class="btn btn-success"> Close All </button>
+
+		  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <strong> {{allStatus}} </strong> <br> <br>
+
         
+
         </form>
 
+
+
     </div> 
+
   </div>
+
 </div>
+
 <div class="col-md-4"></div>
+
 </div><br><br><br><br><br><br>
+
 </div>
+

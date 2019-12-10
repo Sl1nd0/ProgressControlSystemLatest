@@ -27,8 +27,7 @@ app.controller('loginController', function ($scope, $rootScope, $window, $sessio
             } else if (response.data.code == '01') {
                 //alert('Status 01'); //Here it is already active 
 
-                //RETURN TO Make V and Contr ........
-                
+                //RETURN TO Make V and Contr .......
                 $location.path('/employees');
             } else {
                 alert(response.data);

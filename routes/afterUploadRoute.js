@@ -24,7 +24,7 @@ let transporter = nodemailer.createTransport({
 	port: 25,
 	auth: {
 	user: 'ssankabi@gmail.com',
-	pass: '@Sli23547'
+	pass: '@Sl123547'
 	},
 	tls: {
 	rejectUnauthorized: false
@@ -49,7 +49,7 @@ router.post('/API/sendFile:ToDo', function(req, res) {
    let fileName = req.files.file.name;
    let oldpath = req.files.file.path;
 
-   console.log(data1.eMail + " as to Email  88  From one iz -> " +data1.fromEmail);
+   console.log(data1.eMail + " as to Email  88  From one iz -> " +data1.fromEmail + ' FILE  is ' + fileName);
    console.log(' IM working here ! ** -> ');
    let newPath = ".//saved_uploads//" + fileName; 
   //var newpath = "C://Mine//" +  fname.toString();
@@ -98,6 +98,37 @@ router.post('/API/sendFile:ToDo', function(req, res) {
     
     }
   });
+  
+  } else {
+    return res.status(400).send('Please fill in all required fields');
+  }
+
+});
+
+router.get('/API/sendNoAttached:ToDo', function(req, res) {
+
+  if (req.params.ToDo)
+    {
+	//console.log(.);
+	var data1 = JSON.parse(decodeURI(req.params.ToDo));
+ 
+   let mailOptions = {
+		from: data1.fromEmail,
+		to: data1.eMail,
+		subject: data1.eSubject,
+          text: data1.eMessage
+	};
+
+	transporter.sendMail(mailOptions, function(error, info) {
+		
+		if (error) {
+		  console.log(error);
+		  return res.status(400).send('Email does not exist ');
+		} else {
+		  return res.status(200).send('Email successfully sent');
+		 console.log('Email sent: ' + info.response); 
+		}
+	});
   
   } else {
     return res.status(400).send('Please fill in all required fields');

@@ -4,7 +4,7 @@
   "description": "My Final Project - Progress Control System (Helps improve the production of employees)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node start.js"
   },
   "author": "Silindokuhle (Sli)",
   "license": "ISC",
@@ -14,8 +14,10 @@
     "angular-route": "^1.7.8",
     "angular-socket-io": "^0.7.0",
     "angular-websocket": "^2.0.1",
+    "base-64": "^0.1.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "email-existence": "^0.1.6",
     "engine": "^1.0.0",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
@@ -23,6 +25,7 @@
     "formidable": "^1.2.1",
     "fs": "0.0.1-security",
     "http": "0.0.0",
+    "moment": "^2.24.0",
     "multer": "^1.4.2",
     "mustache-express": "^1.2.8",
     "nexmo": "^2.5.1",
@@ -40,7 +43,5 @@
     "view": "^1.1.1",
     "ws": "^7.1.2"
   },
-   "scripts": {
-    "start": "node start.js"
-  }
+  "devDependencies": {}
 }

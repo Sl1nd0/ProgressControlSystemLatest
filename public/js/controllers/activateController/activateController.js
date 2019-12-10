@@ -24,6 +24,7 @@ app.controller('activateController', function ($scope, $rootScope, $window, $ses
         $scope.resendVerification = function()
         {   
             //alert('My TEST! --> * ' + newData.email);
+			//alert('Im re-sending');
             createAccountService.resendVerification(JSON.stringify(newData))
             .then(function(response) {
 
@@ -32,8 +33,14 @@ app.controller('activateController', function ($scope, $rootScope, $window, $ses
                 //alert('New 1 ' + verification);
                 }, 40000);
 
-                verification = response.data.randv;
-                alert(response.data.msg);
+				if (response.status != 200)
+				{	
+					alert(response.data);
+				} else {
+					verification = response.data.randv;
+					//alert(response.data.msg);
+					alert(response.data.msg);
+				}
             });     
         }
 

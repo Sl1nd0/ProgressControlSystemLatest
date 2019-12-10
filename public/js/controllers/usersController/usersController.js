@@ -129,15 +129,21 @@ app.controller('usersController', function ($scope, $route, $rootScope, $window,
                     ePosition: position,
                     ePassword: pass
                 }
-                    console.log(location);
+                    //console.log(location);
                     mydata.push(myjson);  
             }
             
             $scope.Employees = mydata;
-            
+            return;
         }
 
         chatSocket.on('getallusers', function(data) {
+            
+          if ($sessionStorage.locs == undefined)
+          {
+            $sessionStorage.locs = data.location;
+          }
+
             if (data.alldata != undefined)
             {
                 //alert(data.locations[0]);
@@ -145,20 +151,32 @@ app.controller('usersController', function ($scope, $route, $rootScope, $window,
                 
                 //$scope.setLocationData();
             }
-            
+            //console.log(data.alldata + ' az my data \n');
+            //console.log(data.location + ' az my location \n');
+
             if (data.location != undefined)
             {
                 //console.log(data.location[0])
                newlocation = data.location;
                  //alert( data.location[0])
+                 
             }
+
+            let myloc = data.location ;
+            for (var i = 0; i < data.location.length; i++)
+            {
+               // console.log($sessionStorage.locs[i] + '  == ----- ==  ' + data.location[i] + '\n');
+               if ($sessionStorage.locs[i] != data.location[i]) {
+                  //alert('Changes'); //SOMETHING CHANGED ..
+                  $scope.setAfterReturn(datafromsocket, newlocation);
+                   $sessionStorage.locs = data.location;
+                 }
+            }
+               // $scope.setAfterReturn(datafromsocket, newlocation); //Rememeber to uncomment
             
-        });
-        
-        $scope.setAfterReturn(datafromsocket, newlocation);
-        
+           // mylocations
+        }); 
         }
     });
     
 });
-

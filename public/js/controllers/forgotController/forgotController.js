@@ -11,13 +11,20 @@ app.controller('forgotController', function ($scope, $rootScope, $window, $sessi
             email: $scope.email,
             number: cellno
         }
-
-        alert(cellno);
+		
+		if (!Data.email || !$scope.countrycode || !$scope.telnumber)
+		{
+			alert('Fill in all details correctly');
+		} else {
+			
+        //alert(cellno);
         createAccountService.forgotPassword(JSON.stringify(Data))
         .then(function(response) {
             alert(response.data);
            
         });
+		
+		}
     }
 
     $scope.GoBack = function()

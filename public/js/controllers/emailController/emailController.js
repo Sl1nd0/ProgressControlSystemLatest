@@ -52,22 +52,41 @@ app.controller('emailController', function ($scope, $rootScope, $window, $sessio
             var uploadUrl = 'http://localhost:3000/api/v1/quotes/quoteitem/image/upload';
 
             let file = $scope.customer;
+            let fileContents = file.file;
 
-            sendMessagesService.sendFile(file, encodeURI(JSON.stringify(newData)))
-            .then(function (response)
+            if (fileContents != undefined)
             {
-               //alert(myFile.files[0].path + " As PATH");
-               if (response.status != 200)
-               {
-                    alert(response.data)
-               } else {
-                    alert(response.data);
-                    $location.path('/employees');
-               }    
-               
-            });   
+                sendMessagesService.sendFile(file, encodeURI(JSON.stringify(newData)))
+                .then(function (response)
+                {
+                   //alert(myFile.files[0].path + " As PATH");
+                   if (response.status != 200)
+                   {
+                        alert(response.data)
+                   } else {
+                        alert(response.data);
+                        $location.path('/employees');
+                   }    
+                   
+                }); 
+            } else {
+                sendMessagesService.sendEmailNoAttach(encodeURI(JSON.stringify(newData)))
+                .then(function (response)
+                {
+                   //alert(myFile.files[0].path + " As PATH");
+                   if (response.status != 200)
+                   {
+                        alert(response.data)
+                   } else {
+                        alert(response.data);
+                        $location.path('/employees');
+                   }    
+                   
+                }); 
+               // alert('You have nothing, IM NOT moving baba!!');
+            }
         }
-
+        
         $scope.GoBack = function()
         {
             $location.path('/employees');

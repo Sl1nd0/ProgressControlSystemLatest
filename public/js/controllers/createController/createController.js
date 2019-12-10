@@ -32,7 +32,7 @@ app.controller('createController', function ($scope, $rootScope, $window, $sessi
         //Gender Issues ...
 
         validNumber = $scope.countrycode + $scope.telnumber;
-        alert(validNumber);
+        //alert(validNumber);
         let position = $scope.position;
         let workid = '';
 
@@ -68,20 +68,28 @@ app.controller('createController', function ($scope, $rootScope, $window, $sessi
             } else if ($scope.countrycode != '+27' || $scope.telnumber == undefined) {
                 alert('Please fill in the correct phone number');
             } else {
-            createAccountService.createAccount(JSON.stringify(Data))
-            .then(function(response) {
+			//alert(workid)
+			if (workid == '1' || workid == '2' || workid == '3')
+			{
+				alert('Please be patient while PCS is validating your details');
+				createAccountService.createAccount(JSON.stringify(Data))
+				.then(function(response) {
 
-                if (response.status != 200)
-                {     
-                    alert(response.data);
-                    //$scope.Back();
-                } else {
-                    alert('Account created successfully Real');
-                   // alert(response.data.randv);
-                    $location.path('/confirm');
-                    //$scope.Back();
-                }
-            });
+					if (response.status != 200)
+					{     
+						alert(response.data);
+						//$scope.Back();
+					} else {
+						alert('Account created successfully');
+					   // alert(response.data.randv);
+						$location.path('/confirm');
+						//$scope.Back();
+					}
+				});
+				
+			} else {
+				alert('The administrator only catered for 3 types of positions for now\n\n WHICH ARE:\n1. Software Developer 2. Support Engineer 3.Consultant');
+			}
         }
 
         //alert('Create Controller Of Mine !!!')
