@@ -117,6 +117,17 @@ router.get('/activateData', function(req, res) {
 	}
 });
 
+
+router.get('/API/logout', function(req, res) {
+	req.session.mydata = undefined;
+	if (req.session.mydata == undefined)
+	{
+		return res.status(200).send('Successfully logged out');
+	} else {
+		return res.status(400).send('Something went wrong logging out');
+	}
+});
+
 router.get('/getLoggedIn', function(req, res) {
 	mdata = req.session.mydata;
 	console.log("My DATA MAN !!!!!!!!!!" + mdata);

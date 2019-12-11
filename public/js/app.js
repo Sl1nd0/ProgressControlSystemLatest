@@ -64,6 +64,10 @@ app.config(function ($routeProvider) {
         templateUrl: '/hardware/hardware.html',
         controller: 'automationController'
     })
+	.when('/logout', {
+        templateUrl: '/login/login.html',
+        controller: 'logoutController'
+    })
     .otherwise({
         //redirectTo: '/'
          redirectTo: '/'
