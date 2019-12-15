@@ -15,7 +15,7 @@ pool.connect(function(err, res) {
 }); //2578398_1
 
 queryCheck = "ALTER TAble progressaccount ";
-queryCheck += "add column sickleave integer default 20;";
+queryCheck += "add column sickleave integer default 20; ";
 // queryCheck += " locationstatus integer NOT NULL, userid integer REFERENCES progressAccount (userid), locationdate Timestamp not null) ";
 
  pool.query(
@@ -27,6 +27,6 @@ queryCheck += "add column sickleave integer default 20;";
 	} else {
 	console.log('SUCCESS SUCCESS');
 	}
- });*/
+ });
 
 module.exports = pool;
