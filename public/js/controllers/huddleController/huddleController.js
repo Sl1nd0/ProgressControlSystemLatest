@@ -238,6 +238,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
 
             $scope.showDev = function()
             {
+				$scope.updateHuddle = false;
                 $sessionStorage.displayPosition = '1';
                 
                 $location.path('/huddles');
@@ -246,6 +247,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
 
             $scope.showCon = function()
             {
+				$scope.updateHuddle = false;
                 $sessionStorage.displayPosition = '2';
                 //$scope.categories($sessionStorage.displayPosition);
                 $location.path('/huddles');
@@ -254,6 +256,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
 
             $scope.showSupp = function()
             {
+				$scope.updateHuddle = false;
                 $sessionStorage.displayPosition = '3';  
                 //$scope.categories($sessionStorage.displayPosition);
                 $location.path('/huddles');
@@ -308,7 +311,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 }
 
                 if ($sessionStorage.displayPosition != 100 && $sessionStorage.displayPosition != position)
-                {
+                {   
                     alert('You cannot update huddles for ' + messageUpdate);
                 } else {
                 //alert('ALYV ');

@@ -14,8 +14,9 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-/*queryCheck = "CREATE TABLE postlocation ( locationid  serial PRIMARY KEY, sitename character varying(50) NOT NULL, locationmessage character varying(500) NOT NULL, ";
- queryCheck += " locationstatus integer NOT NULL, userid integer REFERENCES progressAccount (userid), locationdate Timestamp not null) ";
+queryCheck = "ALTER TAble progressaccount ";
+queryCheck += "add column sickleave integer default 20;";
+// queryCheck += " locationstatus integer NOT NULL, userid integer REFERENCES progressAccount (userid), locationdate Timestamp not null) ";
 
  pool.query(
      queryCheck, (err4, qres4) => {
