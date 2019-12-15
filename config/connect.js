@@ -13,7 +13,7 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 }); //2578398_1
-
+/*
 queryCheck = "ALTER TAble progressaccount ";
 queryCheck += "add column annualleave integer default 10; ";
 // queryCheck += " locationstatus integer NOT NULL, userid integer REFERENCES progressAccount (userid), locationdate Timestamp not null) ";
@@ -27,6 +27,6 @@ queryCheck += "add column annualleave integer default 10; ";
 	} else {
 	console.log('SUCCESS SUCCESS');
 	}
- });
+ });*/
 
 module.exports = pool;
