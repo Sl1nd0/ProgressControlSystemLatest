@@ -18,29 +18,33 @@ app.controller('siteController', function ($scope, $rootScope, $window, $session
                 {
                   //  let dec = parseInt($scope.color.toString().substring(0, $scope.color.toString().length),16);
                     //alert(dec + ' AS MY DCC')
-                    let data = {
-                        sitename: $scope.sitename,
-                        red:  $scope.hexToRgb($scope.color).r,
-                        green: $scope.hexToRgb($scope.color).g,
-                        blue: $scope.hexToRgb($scope.color).b
-                    }
+					if ($scope.sitename != undefined) {
+						let data = {
+							sitename: $scope.sitename,
+							red:  $scope.hexToRgb($scope.color).r,
+							green: $scope.hexToRgb($scope.color).g,
+							blue: $scope.hexToRgb($scope.color).b
+						}
 
-                    //alert(dec);
-                   // alert( $scope.hexToRgb($scope.color).r + ' ' + $scope.hexToRgb($scope.color).g  + ' ' + $scope.hexToRgb($scope.color).g + ' AS HEX ');
-                    let encoded = encodeURI(JSON.stringify(data));
+						//alert(dec);
+					   // alert( $scope.hexToRgb($scope.color).r + ' ' + $scope.hexToRgb($scope.color).g  + ' ' + $scope.hexToRgb($scope.color).g + ' AS HEX ');
+						let encoded = encodeURI(JSON.stringify(data));
 
-                    if (myData.rows[0].useremail.toUpperCase().trim() == 'SSANKABI@GMAIL.COM')
-                    {
-						siteServices.addSite(encoded)
-						.then(function(response) {
-						//After response man!
-							alert(response.data);
-							$location.path('/location');
+						if (myData.rows[0].useremail.toUpperCase().trim() == 'SSANKABI@GMAIL.COM')
+						{
+							siteServices.addSite(encoded)
+							.then(function(response) {
+							//After response man!
+								alert(response.data);
+								$location.path('/location');
 
-						});
-                    } else {
-                      alert('You do not have privileges of adding site, please speak to the pcs owner');
-                    }
+							});
+						} else {
+						  alert('You do not have privileges of adding site, please speak to the pcs owner');
+						}
+					} else {
+						alert('Cannot add a site with a blank site name');
+					}
                 }
 
                 $scope.escapeForJson = function(value) {

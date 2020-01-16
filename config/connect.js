@@ -14,8 +14,9 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-queryCheck = "Delete From worksite where sitename = 'undefined'";
+//queryCheck = "Delete From worksite where sitename = 'undefined'; ";
 
+/*
  pool.query(
      queryCheck, (err4, qres4) => {
 	if (err4)
@@ -26,5 +27,6 @@ queryCheck = "Delete From worksite where sitename = 'undefined'";
 	console.log('SUCCESS SUCCESS');
 	}
  });
+	*/
 
 module.exports = pool;
