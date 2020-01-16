@@ -14,7 +14,7 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-queryCheck = "Delete From worksitename where sitename = 'undefined'";
+queryCheck = "Delete From worksite where sitename = 'undefined'";
 
  pool.query(
      queryCheck, (err4, qres4) => {
