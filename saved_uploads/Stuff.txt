@@ -195,7 +195,7 @@ http://10.211.110.131:8084    ------ 311 Warehouse
 
 ('Support Group Name'  = "WMS Support" OR 'Support Group Name'  = "WMS 2nd Line Support") AND 'Submit Date' > "05/11/2018 12:00:00 AM"
 
-'Notes' LIKE "%2370119_1%" AND 'Submit Date' > "05/01/2019 12:00:00 AM"
+'Notes' LIKE "%1389685_1%" AND 'Submit Date' > "05/01/2019 12:00:00 AM"
 
 437087
 Iyazi@Amilla@2013!!
@@ -2236,3 +2236,23 @@ https://flows.messagebird.io/flows/newFlow
 
 $ curl -X POST -H 'Content-Type: application/json' -d '{ "recipient": "MessageBird", "message": "HALAJU", "originator": "SLI" }' https://flows.messagebird.io/flows/newFlow
 ?200
+
+
+
+20191204_2566429_1
+
+
+
+
+ /apps/wcs/source/services/desktop_interface/public/pdf/2566429_1.pdf 
+
+
+
+ASSESSMENER
+https://www.notion.so/Backend-Engineer-Test-96b17f7f127a470596483a42917c39d5
+
+
+
+
+https://stackoverflow.com/questions/14275304/how-to-get-margin-value-of-a-div-in-plain-javascript
+
