@@ -47,8 +47,6 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 });
-
-module.exports = pool;
-
-module.exports = pool;
 */
+
+module.exports = pool;
