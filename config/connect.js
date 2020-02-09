@@ -1,4 +1,5 @@
 const pg = require('pg');
+
 let queryCheck = "";
 
 const pool = new pg.Pool({
@@ -14,8 +15,8 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-/*
-queryCheck = "alter table employeeleave add column leavetype varchar(12); ";
+
+queryCheck = "UPDATE progressaccount set annualleave = 10, sickleave = 20";
 
  pool.query(
      queryCheck, (err4, qres4) => {
@@ -23,13 +24,23 @@ queryCheck = "alter table employeeleave add column leavetype varchar(12); ";
 	{
 	console.log(err4+'\n\n\n******');
 	console.log('SORRY SORRY SORRY');
-	} else {
+	} else { 
 	console.log('SUCCESS SUCCESS');
+	let queryCheck2 = "Delete From employeeleave;";
+		pool.query(
+		 queryCheck2, (err5, qres5) => {
+			 if (err5) {
+				console.log('SORRY SORRY SORRY 2');
+			 } else {
+				 console.log('SUCCESS SUCCESS 2');
+			}			
+		});
 	}
  });
-*/
 
-/*const pg = require('pg');
+
+/*
+const pg = require('pg');
 
 
 const pool = new pg.Pool({
