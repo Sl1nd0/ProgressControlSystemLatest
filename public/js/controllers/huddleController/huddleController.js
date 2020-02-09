@@ -322,6 +322,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
             $scope.showUpdate = function()
             {
                 let messageUpdate = '';
+				//alert($sessionStorage.displayPosition + ' AS ');
                 if ($sessionStorage.displayPosition == '1')
                 {
                    // alert('Alive !2');
@@ -339,7 +340,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
 
                 if ($sessionStorage.displayPosition != 100 && $sessionStorage.displayPosition != position)
                 {   
-                    alert('You cannot update huddles for ' + messageUpdate + '    ' + $sessionStorage.displayPosition);
+                    alert('You cannot update huddles for ' + messageUpdate);
                 } else {
                 //alert('ALYV ');
                 $scope.updateHuddle = true;
@@ -359,7 +360,8 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 $scope.today = '';
                 $scope.obstacles = '';
                 $scope.help = '';
-                $sessionStorage.displayPosition = undefined;
+                //$sessionStorage.displayPosition = undefined;
+				return;
             }
 			
 			$scope.escapeForJson = function(value) {

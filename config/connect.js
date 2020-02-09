@@ -13,7 +13,7 @@ pool.connect(function(err, res) {
     } else {
         console.log(' Successfully Connected to Database');
     }
-}); //2578398_1
+}); //2578398_1*/
 
 /*
 queryCheck = "DELETE FROM huddleupdates";
@@ -28,7 +28,7 @@ queryCheck = "DELETE FROM huddleupdates";
 	console.log('SUCCESS SUCCESS');
 	}
  });
- */
+ 
 
 /*
 const pg = require('pg');
@@ -50,5 +50,4 @@ pool.connect(function(err, res) {
     }
 });
 */
-
 module.exports = pool;
