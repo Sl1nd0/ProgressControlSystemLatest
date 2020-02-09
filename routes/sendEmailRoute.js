@@ -23,15 +23,15 @@ let transporter = nodemailer.createTransport({
 	secure: false,
 	port: 25,
 	auth: {
-	user: 'ssankabi@gmail.com',
-	pass: '@Sl123547'
-	},
+	user: 'progresscontrolsystem@gmail.com',
+	pass: '@Sl1235477'
+	 },
 	tls: {
 	rejectUnauthorized: false
 	}
 });
 
-router.post('/API/SendEmail:ToDo', function(req, res) {
+router.get('/API/SendEmail:ToDo', function(req, res) {
     
     if (req.params.ToDo)
     {
@@ -42,13 +42,13 @@ router.post('/API/SendEmail:ToDo', function(req, res) {
       //  var newPath = 'C:\\Users\\Stuff.txt';
         var dst = fs.createWriteStream(filename);
 
-        console.log( myData.eMail + 'As EMAIL ');
+        console.log( myData.eMail + 'As EMAIL ' +  myData.eName + ' email: ' + myData.fromEmail);
         //console.log(myData.eAttachment.value + " \n as email attachements");
         let mailOptions = {
-            from: 'ssankabi@gmail.com',
+            from: 'progresscontrolsystem@gmail.com',
             to: myData.eMail,
             subject: myData.eSubject,
-            text: myData.eMessage,
+            text: myData.eMessage + '\n\nFROM PCS SENT BY ' + myData.eName + ' email: ' + myData.fromEmail,
             attachments: [
                 {
                     filename: myData.efilename,
@@ -59,7 +59,7 @@ router.post('/API/SendEmail:ToDo', function(req, res) {
         
         transporter.sendMail(mailOptions, function(error, info){
             if (error) {
-            console.log(error);
+            console.log(' Error Files \n' + error);
             return res.status(400).send('Email does not exist ');
             } else {
             console.log('Successfully sent man');
@@ -71,5 +71,36 @@ router.post('/API/SendEmail:ToDo', function(req, res) {
         return res.status(400).send('Error, Could not send Email, no email address');
     }
 });
+
+router.get('/API/sendNoAttached:ToDo', function(req, res) {
+    
+    if (req.params.ToDo)
+    {
+        var myData = JSON.parse(decodeURI(req.params.ToDo));
+
+        console.log( myData.eMail + 'As EMAIL ' +  myData.eName + ' email: ' + myData.fromEmail);
+        //console.log(myData.eAttachment.value + " \n as email attachements");
+        let mailOptions = {
+            from: 'progresscontrolsystem@gmail.com',
+            to: myData.eMail,
+            subject: myData.eSubject,
+            text: myData.eMessage + '\n\nFROM PCS SENT BY ' + myData.eName + ' email: ' + myData.fromEmail
+        };
+        
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+            console.log(' ERRRR mail' + error);
+            return res.status(400).send('Email does not exist ');
+            } else {
+            console.log('Successfully sent man');
+            return res.status(200).send('Email successfully sent');
+            }
+        });
+    
+    } else {
+        return res.status(400).send('Error, Could not send Email, no email address');
+    }
+});
+
 
 module.exports = router;

@@ -23,7 +23,7 @@ let transporter = nodemailer.createTransport({
 	secure: false,
 	port: 25,
 	auth: {
-	user: 'ssankabi@gmail.com',
+	user: 'progresscontrolsystem@gmail.com',
 	pass: '@Sl123547'
 	},
 	tls: {

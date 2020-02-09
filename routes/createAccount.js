@@ -29,7 +29,7 @@ let transporter = nodemailer.createTransport({
 	secure: false,
 	port: 25,
 	auth: {
-	user: 'ssankabi@gmail.com',
+	user: 'progresscontrolsystem@gmail.com',
 	pass: '@Sl1235477'
 	},
 	tls: {
@@ -86,7 +86,7 @@ router.get('/API/CreateAccount:ToDo', function(req, res) {
 							mstr += ' Use this verification code to confirm your account ' + randval;
 
 							let mailOptions = {
-								from: 'ssankabi@gmail.com',
+								from: 'progresscontrolsystem@gmail.com',
 								to: myData.email,
 								subject: 'Verification email from Progress Control System',
 								text: mstr
@@ -243,7 +243,7 @@ function sendPassword(Data)
 		mstr += Data.rows[0].userpassword;
 
 	let mailOptions = {
-		from: 'ssankabi@gmail.com',
+		from: 'progresscontrolsystem@gmail.com',
 		to: Data.rows[0].useremail,
 		subject: 'Password for PCS',
 		text: mstr
@@ -282,7 +282,7 @@ function resendDATA(Data, req, res)
 			mstr += ' Use this verification code to confirm your account ' + randval;
 
 	let mailOptions = {
-		from: 'ssankabi@gmail.com',
+		from: 'progresscontrolsystem@gmail.com',
 		to: Data.email,
 		subject: 'Verification email from Progress Control System',
 		text: mstr

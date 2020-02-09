@@ -24,8 +24,8 @@ let transporter = nodemailer.createTransport({
 	secure: false,
 	port: 25,
 	auth: {
-	user: 'ssankabi@gmail.com',
-	pass: '@Sli23547'
+	user: 'progresscontrolsystem@gmail.com',
+	pass: '@Sl1235477'
 	},
 	tls: {
 	rejectUnauthorized: false
@@ -205,7 +205,7 @@ function sendData(Data, status, req, res)
     mstr += status + " by " +  Data.managername;
     
 	let mailOptions = {
-		from: 'ssankabi@gmail.com',
+		from: 'progresscontrolsystem@gmail.com',
 		to: Data.email,
 		subject: 'Leave approved by ' + Data.managername,
 		text: mstr

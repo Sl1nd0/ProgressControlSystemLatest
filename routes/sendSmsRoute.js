@@ -14,6 +14,7 @@ var mdata = '';
 //router.use(cookieParser());
 //app.use(express.session({ secret: 'something', store: store }));
 var Nexmo = require('nexmo');
+
 const nexmo = new Nexmo({
 	apiKey: 'd22c162a',
 	apiSecret: 'Ev5RQke8YMLdosu6',
@@ -26,7 +27,7 @@ router.get('/API/SendSms:ToDo', function(req, res) {
     if (req.params.ToDo)
     {
         let myData = JSON.parse(decodeURI(req.params.ToDo));
-        let msg =  myData.eMessage;
+        let msg =  myData.eMessage + '\n\nFROM PCS SENT BY ' + myData.eName + ' no: ' + myData.eNumber;
         
         while(msg.indexOf('<q2>') >= 0)
         {

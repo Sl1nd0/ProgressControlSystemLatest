@@ -4,6 +4,9 @@ app.controller('emailController', function ($scope, $rootScope, $window, $sessio
  $http.get('/getLoggedIn').then(function(response) {
         var position = '';    
 	$sessionStorage.displayPosition = undefined;
+	
+	var userData = response.data.Data;
+	
       // //alert(('Resp ' + response.data.Code)
             if (!response.data.Code)
             {
@@ -21,7 +24,7 @@ app.controller('emailController', function ($scope, $rootScope, $window, $sessio
         $scope.customer = {};
         $scope.sendEmail = function()
         {
-            //alert('File iz ' + $scope.attachment);
+            //alert('File iz *** ');
             sendMessagesService.sendEmail(encodeURI(JSON.stringify(newData)))
             .then(function (response)
             {
@@ -34,9 +37,9 @@ app.controller('emailController', function ($scope, $rootScope, $window, $sessio
       
         $scope.realSender =  function()
         {
-            
+			console.log(myData);
             let newData = {
-                eName: myData.eName,
+                eName: userData.rows[0].username,
                 eMail: myData.eMail,
                 fromEmail: myData.myEmail,
                 eNumber: myData.eNumber,

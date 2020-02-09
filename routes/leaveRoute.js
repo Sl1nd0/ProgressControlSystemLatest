@@ -21,8 +21,8 @@ let transporter = nodemailer.createTransport({
 	secure: false,
 	port: 25,
 	auth: {
-	user: 'ssankabi@gmail.com',
-	pass: '@Sli23547'
+	user: 'progresscontrolsystem@gmail.com',
+	pass: '@Sl1235477'
 	},
 	tls: {
 	rejectUnauthorized: false
@@ -222,13 +222,15 @@ function sendEmail(Data, link, employeeVal, managerVal)
 	};
 	
 	transporter.sendMail(mailOptions, function(error, info){
+		let Data2 = '';
 		if (error) {
 		console.log(error);
 		return res.status(400).send('Something went wrong when sending an email to your manager');
 		} else {
 		//emailTest = 1; 
-		
-		updateEmployeeLeave(Data, employeeVal, managerVal);
+		Data2 = Data;
+		Data = undefined;
+		updateEmployeeLeave(Data2, employeeVal, managerVal);
 
 		console.log('Email sent: ' + info.response);
 		return;
@@ -246,7 +248,12 @@ function updateEmployeeLeave(myData, employeeVal, managerVal)
 
 		pool.query(
 			queryInsert, (err5, qres5) => {
+			
+			if (err5) {
+			console.log("Leave Error \n\n" + queryInsert);
+			} else {
 			console.log("Done UPDATING FOR LEAVE");
+			}
 		});		
 	return;
 }
