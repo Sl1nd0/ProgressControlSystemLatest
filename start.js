@@ -41,7 +41,6 @@ console.log(path.join(__dirname, 'public'));
 //app.use(beginroutes);
 app.use(index); // Set the page router
 
-/*
 app.use(createAccount);
 app.use(loginAccount);
 
@@ -55,7 +54,7 @@ app.use(locationRoute);
 app.use(siteRoute);
 app.use(automationRoute);
 app.use(fileuploadRoute);
-*/
+
 //app.set('port', 4000);
 //connection was here
 
