@@ -15,7 +15,7 @@ pool.connect(function(err, res) {
 }); //2578398_1
 
 
-queryCheck = "UPDATE progressaccount set annualleave = 10";
+queryCheck = "UPDATE progressaccount set annualleave = 10;";
 
  pool.query(
      queryCheck, (err4, qres4) => {
