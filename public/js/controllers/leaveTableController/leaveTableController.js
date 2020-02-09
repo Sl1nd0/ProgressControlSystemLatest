@@ -45,8 +45,8 @@ app.controller('leaveTableController', function ($scope, $rootScope, $window, $s
                                 enddate: enddate,
                                 empName: empName,
                                 empSur: empSur,
-                                empEmail: empEmail, //CHANGE
-                                managerEmail: managerEmail,
+                                empEmail: empEmail.toLowerCase(), //CHANGE
+                                managerEmail: managerEmail.toLowerCase(),
                                 empType: empType,
                                 leaveDays: leaveDays,
                                 leaveid: leaveid,
@@ -61,23 +61,29 @@ app.controller('leaveTableController', function ($scope, $rootScope, $window, $s
 
                 $scope.removeLeave = function(val)
                 {
-                    let myId = {
-                        id: val,
-                        email: loginData.rows[0].useremail
-                    }
-                 //alert(' My ID ' + myId.id)
-                    leaveServices.removeLeave(JSON.stringify(myId))
-                    .then(function(response) {
-                        //    alert('Ayoba Africa!')
-                        if (response.status != 200)
-                        {
-                            alert(response.data);
-                        } else {
-                            alert(response.data);
-                            $location.path('/leavetable')
-                           return $scope.checkAll();
-                        }
-                    });
+					let value = confirm("Are you sure you want to remove selected leave info?");
+					
+					if (value) {
+						let myId = {
+							id: val,
+							email: loginData.rows[0].useremail
+						}
+					 //alert(' My ID ' + myId.id)
+						leaveServices.removeLeave(JSON.stringify(myId))
+						.then(function(response) {
+							//    alert('Ayoba Africa!')
+							if (response.status != 200)
+							{
+								alert(response.data);
+							} else {
+								alert(response.data);
+								$location.path('/leavetable')
+							   return $scope.checkAll();
+							}
+						});
+					} else {
+						return $scope.checkAll();
+					}
                 }
 
                 $scope.checkAll();

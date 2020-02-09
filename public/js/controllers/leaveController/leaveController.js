@@ -131,10 +131,10 @@ app.controller('leaveController', function ($scope, $rootScope, $window, $sessio
                         let requestdata = {
                             employeename: $scope.name, //22
                             lastname: $scope.lastname, //33
-                            email: $scope.email, //11
+                            email: $scope.email.toLowerCase(), //11
                             usernumber: phone, //44
                             managername: $scope.managername,   //1
-                            manageremail: $scope.manageremail, //2
+                            manageremail: $scope.manageremail.toLowerCase(), //2
                             countrycode:  $scope.countrycode,
                             telnumber: $scope.telnumber,
                             datestart: $scope.datestart,
