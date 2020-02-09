@@ -81,6 +81,7 @@ router.get('/API/CheckAll:ToDo', function(req, res) {
     
     if (req.params.ToDo)
     {	
+
         let myData = JSON.parse(req.params.ToDo);
 
         let queryOne = "SELECT * FROM huddleupdates A ";
@@ -88,7 +89,7 @@ router.get('/API/CheckAll:ToDo', function(req, res) {
         queryOne += " where A.workid = '";
         queryOne += myData.workid + "' ORDER BY huddledate ASC; ";
 
-        console.log(queryOne);
+        console.log('Query One ' + queryOne);
         pool.query(
             queryOne, (err4, qres4) => {
                 if (err4)

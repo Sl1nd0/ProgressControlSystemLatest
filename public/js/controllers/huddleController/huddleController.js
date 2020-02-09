@@ -18,7 +18,8 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
            $location.path('/'); 
         } else if (response.data.Code.trim() == '01') {
            // alert($sessionStorage.displayPosition + ' --->>> as FFF');
-
+			
+			var huddleData = '';
             var myData = response.data.Data;
             position = myData.rows[0].workid;
            
@@ -55,10 +56,10 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 }
 
                 let upData = {
-                    yesterday: $scope.forQuotes($scope.yesterday),
-                    today: $scope.forQuotes($scope.today),
-                    obstacles: $scope.forQuotes($scope.obstacles),
-                    help: $scope.forQuotes($scope.help),
+                    yesterday: $scope.escapeForJson($scope.forQuotes($scope.yesterday)),
+                    today: $scope.escapeForJson($scope.forQuotes($scope.today)),
+                    obstacles: $scope.escapeForJson($scope.forQuotes($scope.obstacles)),
+                    help: $scope.escapeForJson($scope.forQuotes($scope.help)),
                     id: myData.rows[0].userid,
                     workid: myData.rows[0].workid,
                     huddledate: mydate
@@ -82,11 +83,17 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
 
             $scope.removePost = function(val)
             {
+				console.log(' User ' + val.userid);
                 let postData = {
-                    huddleid: val,
-                    id: myData.rows[0].userid
+                    huddleid: val.huddleid,
+                    id: val.userid
                 }
-
+				
+				if (postData.id  !=  myData.rows[0].userid) {
+					alert('Only the poster can remove the post');
+					return $scope.CheckAll();
+				}
+				
                 let value = confirm("Are you sure you want to remove selected?");
 		        //alert(value);
                 if (value)
@@ -99,9 +106,10 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                             alert(response.data);
                         } else {
                             alert(response.data);
-
-                            if ($sessionStorage.displayPosition != 100)
+							//alert($sessionStorage.displayPosition);
+								if ($sessionStorage.displayPosition != 100 && $sessionStorage.displayPosition != undefined)
                                 {
+									//alert('Position @ ' + $sessionStorage.displayPosition);
                                     $scope.categories($sessionStorage.displayPosition);
                                     return $scope.categories($sessionStorage.displayPosition);
                                   
@@ -127,6 +135,12 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 {
                     mystr1 = mystr1.replace('"', '<q2>');
                 }
+				
+				while(mystr1.indexOf(';') >= 0)
+                {
+                    mystr1 = mystr1.replace(';', '<c1>');
+                }
+				
                 return mystr1;
             }
 
@@ -142,6 +156,12 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 {
                     mystr1 = mystr1.replace('<q1>', "'");
                 }
+				
+				while(mystr1.indexOf('<c1>') >= 0)
+                {
+                    mystr1 = mystr1.replace('<c1>', ';');
+                }
+				
                 return mystr1;
             }
 
@@ -151,12 +171,14 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 let mID = {
                     'workid': position
                 }
+				
                 let mydata = [];
                 huddleService.checkAll(JSON.stringify(mID))
                 .then(function (response)
                 {
 
                     let Data = response.data.DataH;
+					console.log(' User ID ' + Data.rows[0].userid);
 
                     for (var i = 0; i < Data.rowCount; i++)
                     {
@@ -167,9 +189,11 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                         let mobstacles = $scope.replaceQuotes(Data.rows[i].obstacles);
                         let needHelp = $scope.replaceQuotes(Data.rows[i].needhelp);
                         let huddleid = Data.rows[i].huddleid;
+						let userid =  Data.rows[i].userid;
 
                         let datestr = huddleDate.toString();
                         datestr = datestr.substring(0,10);
+						
                         let myjson = {
                             Date: datestr,
                             empName: empName,
@@ -177,9 +201,10 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                             accomplishT: accomplishT,
                             mobstacles: mobstacles,
                             needHelp: needHelp,
+							userid: userid,
                             huddleid: huddleid
                         }
-
+						//console.log(myjson);
                         mydata.push(myjson);  
                     }
                     $scope.Huddles = mydata;
@@ -201,12 +226,13 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                     'workid': mypos
                 }
                 let mydata = [];
+				
                 huddleService.checkAll(JSON.stringify(mID))
                 .then(function (response)
                 {
-
+					//alert(' AT NOT 100 ');
                     let Data = response.data.DataH;
-
+					//console.log(Data.rows[0].obstacles);
                     for (var i = 0; i < Data.rowCount; i++)
                     {
                         let huddleDate = Data.rows[i].huddledate;
@@ -228,9 +254,10 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                             needHelp: needHelp,
                             huddleid: huddleid
                         }
-
+						console.log(myjson);
                         mydata.push(myjson);  
                     }
+					//console.log(' NOT 100 \n\n' + mydata[0]);
                     $scope.Huddles = mydata;
                 });
                 return;
@@ -312,7 +339,7 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
 
                 if ($sessionStorage.displayPosition != 100 && $sessionStorage.displayPosition != position)
                 {   
-                    alert('You cannot update huddles for ' + messageUpdate);
+                    alert('You cannot update huddles for ' + messageUpdate + '    ' + $sessionStorage.displayPosition);
                 } else {
                 //alert('ALYV ');
                 $scope.updateHuddle = true;
@@ -333,6 +360,23 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                 $scope.obstacles = '';
                 $scope.help = '';
                 $sessionStorage.displayPosition = undefined;
+            }
+			
+			$scope.escapeForJson = function(value) {
+                        var mval = value;
+
+                          mval.replace(/\b/g, "")
+                          mval.replace(/\f/g, "")
+                          mval.replace(/\\/g, "\\")
+                          mval.replace(/\"/g, "\\\"")
+                          mval.replace(/\t/g, "\\t")
+                          mval.replace(/\r/g, "\\r")
+                          mval.replace(/\n/g, "\\n")
+                          mval.replace(/\u2028/g, "\\u2028")
+                          mval.replace(/\u2029/g, "\\u2029");
+                          mval.replace('"', '\"');
+                          mval.replace('"', '\"');
+                          return mval
             }
 
             if ($sessionStorage.displayPosition != 100)
