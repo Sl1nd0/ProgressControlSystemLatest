@@ -1,4 +1,4 @@
-const pg = require('pg');
+/*const pg = require('pg');
 
 let queryCheck = "";
 
@@ -39,7 +39,6 @@ queryCheck = "UPDATE progressaccount set annualleave = 10, sickleave = 20";
  });
 */
 
-/*
 const pg = require('pg');
 
 
@@ -57,6 +56,6 @@ pool.connect(function(err, res) {
     } else {
         console.log(' Successfully Connected to Database');
     }
-});*/
+});
 
 module.exports = pool;
