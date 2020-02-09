@@ -28,8 +28,8 @@ queryCheck = "alter table employeeleave add column leavetype varchar(12); ";
 	}
  });
 */
-/*
-const pg = require('pg');
+
+/*const pg = require('pg');
 
 
 const pool = new pg.Pool({
@@ -46,7 +46,6 @@ pool.connect(function(err, res) {
     } else {
         console.log(' Successfully Connected to Database');
     }
-});
-*/
+});*/
 
 module.exports = pool;

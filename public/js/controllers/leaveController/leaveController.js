@@ -4,6 +4,10 @@ app.controller('leaveController', function ($scope, $rootScope, $window, $sessio
      //getLoggedIN.getLoggedIN(response)
          $http.get('/getLoggedIn').then(function(response) {
             $sessionStorage.displayPosition = undefined;
+			//console.log(response.data.Data);
+			
+			var userData = response.data.Data;
+			
             if (!response.data.Code)
             {
                 $location.path('/'); 
@@ -80,9 +84,13 @@ app.controller('leaveController', function ($scope, $rootScope, $window, $sessio
                             } else {
                               //  alert(response1.data.leave + ' FRM session');
                                // alert(response1.data.Data.employeename + ' AZ TEST');
-                                
+                               // console.log(response1.data.Data);
+								if (response1.data.Data.employeename != userData.rows[0].username) {
+									return $scope.start();	
+								} else {
                                 sessionData = response1.data.Data;
                                 return $scope.start();
+								}
                             }
                         });
                     }
@@ -140,6 +148,7 @@ app.controller('leaveController', function ($scope, $rootScope, $window, $sessio
                         leaveServices.leaveApply(encodeURI(JSON.stringify(requestdata)))
                         .then(function(response) {
                             alert(response.data);
+							sessionData = undefined;
                         });
                         
                         }  
