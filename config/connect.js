@@ -14,8 +14,8 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-/*
-queryCheck = "alter table employeeleave add column leavetype varchar(12); ";
+
+queryCheck = "UPDATE progressaccount set annualleave = 10";
 
  pool.query(
      queryCheck, (err4, qres4) => {
@@ -27,7 +27,6 @@ queryCheck = "alter table employeeleave add column leavetype varchar(12); ";
 	console.log('SUCCESS SUCCESS');
 	}
  });
-*/
 
 /*const pg = require('pg');
 
