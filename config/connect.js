@@ -15,7 +15,7 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-
+/*
 queryCheck = "UPDATE progressaccount set annualleave = 10, sickleave = 20";
 
  pool.query(
@@ -37,7 +37,7 @@ queryCheck = "UPDATE progressaccount set annualleave = 10, sickleave = 20";
 		});
 	}
  });
-
+*/
 
 /*
 const pg = require('pg');
