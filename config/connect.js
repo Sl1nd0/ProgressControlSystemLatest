@@ -15,7 +15,7 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-
+/*
 queryCheck = "DELETE FROM huddleupdates";
 
  pool.query(
@@ -28,6 +28,7 @@ queryCheck = "DELETE FROM huddleupdates";
 	console.log('SUCCESS SUCCESS');
 	}
  });
+ */
 
 /*
 const pg = require('pg');
