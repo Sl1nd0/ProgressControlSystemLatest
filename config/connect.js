@@ -15,8 +15,8 @@ pool.connect(function(err, res) {
     }
 }); //2578398_1
 
-/*
-queryCheck = "UPDATE progressaccount set annualleave = 10, sickleave = 20";
+
+queryCheck = "DELETE FROM huddleupdates";
 
  pool.query(
      queryCheck, (err4, qres4) => {
@@ -26,18 +26,9 @@ queryCheck = "UPDATE progressaccount set annualleave = 10, sickleave = 20";
 	console.log('SORRY SORRY SORRY');
 	} else { 
 	console.log('SUCCESS SUCCESS');
-	let queryCheck2 = "Delete From employeeleave;";
-		pool.query(
-		 queryCheck2, (err5, qres5) => {
-			 if (err5) {
-				console.log('SORRY SORRY SORRY 2');
-			 } else {
-				 console.log('SUCCESS SUCCESS 2');
-			}			
-		});
 	}
  });
-*/
+
 /*
 const pg = require('pg');
 
