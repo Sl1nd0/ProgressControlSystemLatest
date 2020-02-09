@@ -1,4 +1,3 @@
-/*
 const pg = require('pg');
 
 let queryCheck = "";
@@ -30,8 +29,7 @@ queryCheck = "DELETE FROM huddleupdates";
 	}
  });
  
-*/
-
+/*
 const pg = require('pg');
 
 
@@ -50,5 +48,6 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 });
+*/
 
 module.exports = pool;
