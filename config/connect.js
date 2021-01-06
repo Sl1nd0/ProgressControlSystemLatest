@@ -1,3 +1,4 @@
+/*
 const pg = require('pg');
 
 let queryCheck = "";
@@ -27,18 +28,18 @@ queryCheck = "DELETE FROM huddleupdates";
 	} else { 
 	console.log('SUCCESS SUCCESS');
 	}
- });
- 
-/*
+ });*/
+
 const pg = require('pg');
 
-
 const pool = new pg.Pool({
+	
   user: 'Sli',
   host:'127.0.0.1',
   database:'progresscontrolDB',
   password:'@Sli2354',
   port:'5432'
+  
 });
 
 pool.connect(function(err, res) {
@@ -48,6 +49,5 @@ pool.connect(function(err, res) {
         console.log(' Successfully Connected to Database');
     }
 });
-*/
 
 module.exports = pool;
