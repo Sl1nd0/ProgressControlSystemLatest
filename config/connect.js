@@ -33,18 +33,25 @@ queryCheck = "DELETE FROM huddleupdates";
 const pg = require('pg');
 
 const pool = new pg.Pool({
-	
-  user: 'Sli',
-  host:'127.0.0.1',
-  database:'progresscontrolDB',
-  password:'@Sli2354',
-  port:'5432'
-  
+    host: 'pg-2f257cf2-ssankabi-c992.g.aivencloud.com',
+    user: 'avnadmin',
+    password: 'AVNS_1vzAlgPmsWlCzQm2EFd',
+    database: 'defaultdb',
+    port: 26853,
+    connectionTimeoutMillis: 30000,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
-pool.connect(function(err, res) {
+
+pool.connect(function (err, res) {
+    console.log("Trying to connect to DB");
+
     if (err) {
-        throw err;
+        console.log("DB err");
+        console.log(err);
+        // throw err;
     } else {
         console.log(' Successfully Connected to Database');
     }
