@@ -55,6 +55,10 @@ app.controller('huddleController', function ($scope, $rootScope, $window, $sessi
                     mydate = $scope.huddledate;
                 }
 
+                mydate.setDate(mydate.getDate() + 1);
+
+                //alert(mydate);
+
                 let upData = {
                     yesterday: $scope.escapeForJson($scope.forQuotes($scope.yesterday)),
                     today: $scope.escapeForJson($scope.forQuotes($scope.today)),

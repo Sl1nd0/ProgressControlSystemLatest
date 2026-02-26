@@ -36,12 +36,12 @@ app.controller('createController', function ($scope, $rootScope, $window, $sessi
         let position = $scope.position;
         let workid = '';
 
-        if (position.toLowerCase().indexOf('developer') > 0)
+        if (position.toLowerCase().indexOf('developer') > -1)
         {
             workid = '1';
-        } else if (position.toLowerCase().indexOf('consultant') > 0) {
+        } else if (position.toLowerCase().indexOf('consultant') > -1) {
             workid = '2';
-        } else if (position.toLowerCase().indexOf('support') > 0) {
+        } else if (position.toLowerCase().indexOf('support') > -1) {
             workid = '3';
         } 
 
@@ -84,7 +84,7 @@ app.controller('createController', function ($scope, $rootScope, $window, $sessi
 						} else {
 							alert('Account created successfully');
 						   // alert(response.data.randv);
-							$location.path('/confirm');
+							$location.path('/');
 							//$scope.Back();
 						}
 					});

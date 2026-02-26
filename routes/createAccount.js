@@ -56,10 +56,10 @@ router.get('/API/CreateAccount:ToDo', function(req, res) {
 			}
 		
 		let insertQ = "INSERT INTO progressAccount(username, usersurname, userbirthdate, startdate, ";
-			insertQ += " userposition, useremail, usernumber, usergender, userpassword, useridentity, workid) VALUES ( ";
+			insertQ += " userposition, useremail, usernumber, usergender, userpassword, useridentity, workid, activestatus) VALUES ( ";
 			insertQ += "'"+ myData.name+"', " + "'" + myData.surname + "', '" + myData.birthdate  + "', '" + myData.startdate;
 			insertQ += "', '"+ myData.position +"', " + "'" + myData.email + "', '" + myData.telnumber + "', '" + myData.gender + "', '";
-			insertQ += myData.password + "', '" + myData.idnumber + "', '" + myData.workid + "');";
+			insertQ += myData.password + "', '" + myData.idnumber + "', '" + myData.workid + "', 'active');";
 		
 		let validationQ = "Select * FROM progressAccount";
 			
@@ -92,9 +92,26 @@ router.get('/API/CreateAccount:ToDo', function(req, res) {
 								text: mstr
 							};
 
-						emailExistence.check(myData.email, function(error1, response1){
+						//emailExistence.check(myData.email, function(error1, response1){
+							var response1 = true;
 							if (response1 != false)
 							{
+								pool.query(
+									insertQ, (err4, qres4) => {
+										if (err4)
+										{
+											return res.status(400).send('Something went wrong, please re-create account');
+										} else {
+										req.session.views = myData;	
+										req.session.conf = randval;
+										console.log('My verify is ' + req.session.conf);
+										return res.status(200).send({msg: 'Account created successfully' , verify: randval});
+										
+										//console.dir(responseData);
+										}
+									});
+
+								/*
 								transporter.sendMail(mailOptions, function(error, info){
 									if (error) {
 									console.log(error);
@@ -131,12 +148,12 @@ router.get('/API/CreateAccount:ToDo', function(req, res) {
 												}
 										});
 								}
-							}); 
+							}); */
 						} else {
 							//console.log('Email not thete')
 							return res.status(400).send('Email does not exist ');
 						}
-					});
+					//});
 				}
 			});
 			console.log(insertQ);

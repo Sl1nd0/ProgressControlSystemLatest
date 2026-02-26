@@ -47,12 +47,14 @@ router.get('/API/updateHuddles:ToDo', function(req, res) {
         let myData = JSON.parse(req.params.ToDo);
         let insertQ = '';
 
+        
         if (myData.huddledate != undefined)
         {
             insertQ = "INSERT INTO huddleupdates(huddledate, accomplishyesterday, accomplishtoday, obstacles, needhelp, userid";
             insertQ += ", workid) VALUES ( ";
             insertQ += "'" + myData.huddledate + "', '" +  myData.yesterday + "', '" + myData.today + "', '" + myData.obstacles + "', '";
             insertQ +=   myData.help + "', '" + myData.id + "', '" + myData.workid +  "')";
+
         } else {
             insertQ = "INSERT INTO huddleupdates(huddledate, accomplishyesterday, accomplishtoday, obstacles, needhelp, userid";
             insertQ += ", workid) VALUES ( ";
