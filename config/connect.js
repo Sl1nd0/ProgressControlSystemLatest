@@ -28,7 +28,7 @@ queryCheck = "DELETE FROM huddleupdates";
 	} else { 
 	console.log('SUCCESS SUCCESS');
 	}
- });*/
+ });*/ 
 
 const pg = require('pg');
 
